@@ -58,6 +58,21 @@ body {
   transform: translateY(0);
 }
 
+/* Logo marquee: track holds two copies of the logo list back-to-back and
+   scrolls exactly -50% (the width of one copy), so it loops seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -66,5 +81,8 @@ body {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .animate-marquee {
+    animation: none;
   }
 }

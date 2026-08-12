@@ -15,7 +15,7 @@ export default function SectionHeading({
     <div className="max-w-2xl">
       <Reveal>
         <span
-          className={`font-mono text-xs uppercase tracking-[0.22em] ${
+          className={`font-display text-sm font-semibold uppercase tracking-[0.18em] ${
             light ? "text-red-light" : "text-red"
           }`}
         >

@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { site } from "@/lib/content";
 import { CloseIcon, MenuIcon } from "./icons";
 
 const links = [
   { href: "#priorities", label: "Priorities" },
   { href: "#about", label: "About" },
+  { href: "#journey", label: "Journey" },
   { href: "#work", label: "Kathleen's Work" },
   { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
@@ -31,22 +33,31 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#" className="flex flex-col leading-none">
-          <span className="font-display text-xl font-semibold tracking-tight text-white">
-            {site.candidateName}
-          </span>
-          <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-red-light">
-            {site.office} &middot; {site.electionYear}
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#" className="flex items-center gap-3">
+          <Image
+            src="/site-logo.png"
+            alt="Kathleen DeFever for Tiburon Town Council"
+            width={44}
+            height={44}
+            className="rounded-sm border border-white/15"
+          />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-xl font-semibold tracking-tight text-white">
+              {site.candidateName}
+            </span>
+            <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-red-light">
+              {site.office} &middot; {site.electionYear}
+            </span>
           </span>
         </a>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-9 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm uppercase tracking-[0.06em] text-paper/85 transition-colors hover:text-red-light"
+                className="text-sm uppercase tracking-[0.08em] text-paper/85 transition-colors hover:text-red-light"
               >
                 {link.label}
               </a>
@@ -56,7 +67,7 @@ export default function Nav() {
 
         <a
           href="#contact"
-          className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-light lg:inline-block"
+          className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-light xl:inline-block"
         >
           Get Involved
         </a>
@@ -64,7 +75,7 @@ export default function Nav() {
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="text-white lg:hidden"
+          className="text-white xl:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
@@ -72,14 +83,14 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-navy-deep px-6 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-white/10 bg-navy-deep px-6 pb-6 pt-2 xl:hidden">
           <ul className="flex flex-col gap-1">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-base uppercase tracking-[0.06em] text-paper/85"
+                  className="block py-3 text-base uppercase tracking-[0.08em] text-paper/85"
                 >
                   {link.label}
                 </a>

@@ -5,26 +5,42 @@ import { ArrowIcon } from "./icons";
 
 export default function Hero() {
   return (
-    <section className="relative isolate min-h-[640px] overflow-hidden bg-navy-deep pt-36 pb-24 lg:min-h-[780px] lg:pt-48 lg:pb-32">
-      <Image
-        src="/kathleen-hero.png"
-        alt="Kathleen DeFever holding a Tiburon Town Council campaign sign, with the San Francisco Bay behind her"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[78%_28%]"
-      />
-      {/* Scrim: darkens left for text legibility, keeps the photo visible on the right */}
+    <section className="relative isolate overflow-hidden bg-navy-deep pb-16 lg:min-h-[780px] lg:pb-32 lg:pt-48">
+      {/*
+        Small screens: the photo is a contained block that sits ABOVE the
+        text (normal document flow), so nothing is ever overlaid on her
+        face — object-cover on a photo tuned for a wide desktop crop has
+        no safe area left for text once the box gets narrow and tall.
+        lg+: the photo becomes the full-bleed background behind the text,
+        where there's enough width for text to sit beside her instead.
+      */}
+      <div className="relative h-[420px] w-full sm:h-[480px] lg:absolute lg:inset-0 lg:h-auto">
+        <Image
+          src="/kathleen-hero.png"
+          alt="Kathleen DeFever holding a Tiburon Town Council campaign sign, with the San Francisco Bay behind her"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[68%_15%] lg:object-[78%_28%]"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy-deep lg:hidden"
+        />
+      </div>
+
+      {/* Scrim for the full-bleed desktop layout: darkens left for text
+          legibility, keeps the photo visible on the right */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 hidden lg:block"
         style={{
           background:
             "linear-gradient(90deg, rgba(19,42,76,0.95) 0%, rgba(19,42,76,0.72) 40%, rgba(19,42,76,0.32) 68%, rgba(19,42,76,0.12) 100%), linear-gradient(180deg, rgba(19,42,76,0.05) 0%, rgba(19,42,76,0.12) 55%, rgba(19,42,76,0.9) 100%)",
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-6 pt-10 lg:px-8 lg:pt-0">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-red/40 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-red-light">
             {site.office} &middot; {site.electionYear}

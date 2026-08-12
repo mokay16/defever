@@ -3,6 +3,7 @@ import { site } from "@/lib/content";
 const links = [
   { href: "#priorities", label: "Priorities" },
   { href: "#about", label: "About" },
+  { href: "#journey", label: "Journey" },
   { href: "#work", label: "Kathleen's Work" },
   { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },

@@ -60,6 +60,39 @@ export const priorities = [
   },
 ];
 
+export const journey = [
+  {
+    year: "2018",
+    title: "Appointed to the Planning Commission",
+    body: "Began reviewing land use, permits, and long-range planning for the Town of Tiburon.",
+  },
+  {
+    year: "2020–21",
+    title: "Elected Chair of the Planning Commission",
+    body: "Led the review of dozens of downtown business permits during a critical revitalization period.",
+  },
+  {
+    year: "2021",
+    title: "Co-led Tiburon's first Firewise-certified neighborhood",
+    body: "Built one of the peninsula's earliest nationally recognized fire-safety certifications, block by block.",
+  },
+  {
+    year: "2021",
+    title: "First ran for Town Council",
+    body: "A four-way race for an interim seat — narrowly missed, and stayed engaged with the town ever since.",
+  },
+  {
+    year: "2022–Present",
+    title: "Reappointed to the Planning Commission",
+    body: "Continued shepherding Tiburon's General Plan 2040, including its climate and diversity provisions.",
+  },
+  {
+    year: "2026",
+    title: "Filed for Tiburon Town Council",
+    body: "Running for one of three open seats in the November 3 general election.",
+  },
+];
+
 export const work = [
   {
     title: "Defever Law & MisInsured",
@@ -80,21 +113,6 @@ export const aboutKathleen = [
   "Kathleen loves working with people and has a track record of truly listening to people, caring about their needs, and finding solutions in high-conflict environments. She represents individuals and small businesses and is skilled at reaching a solution which is fair and agreeable to all parties.",
   "Kathleen began her law career defending federal criminals with the prestigious Federal Criminal Defender's Office in Chicago, Illinois. From there she shifted to a nationwide practice in Plaintiff's Insurance Litigation, helping both the disabled and those who lost their homes to fires and floods – most recently victims of the Tubbs and Glass Fires in Napa and Sonoma County. She also dedicates her expertise to scholarly works advocating for better insurance consumer rights around the world, as well as serving on the Town of Tiburon Planning Commission.",
   "Kathleen loves to read about history, sociology, psychology, and economics – and is working on an exciting book which combines these passions. She also loves the opera, great wines, track & field, French and Italian food, and learning new languages. So far she is proficient in French and Spanish – with Italian, Dutch, and Bahasa Indonesia next on her list.",
-];
-
-export const gallery = [
-  "Kathleen and Rick at the Center for Justice and Accountability annual benefit",
-  "Kathleen and her friend Marcello at the first Servino's Opera Night in 2009 – an event Kathleen co-founded",
-  "Kathleen enjoying her work on the Tiburon Planning Commission",
-  "Kathleen and Rick on the Angel Island Sunset Cruise",
-  "Kathleen and Rick at the University of Connecticut School of Law",
-  "Kathleen and Rick supporting local business Tiburon Wine",
-  "Kathleen LOVES libraries and supports the Tiburon Library expansion",
-  "The main intersection of the small town Kathleen is from, in Michigan",
-  "Defever Farms",
-  "Kathleen with her chickens on the family farm",
-  "Kathleen's father and aunts with her Grandfather Defever's beloved tractor, Betsy",
-  "Kathleen and Rick in Rio de Janeiro for the Insurance Law World Conference",
 ];
 
 export const achievements = [

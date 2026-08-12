@@ -1,3 +1,4 @@
+import LogoMarquee from "./LogoMarquee";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { achievements, memberships } from "@/lib/content";
@@ -46,6 +47,15 @@ export default function Achievements() {
           <ListBlock title="Memberships" items={memberships} delayStart={80} />
         </div>
       </div>
+
+      <Reveal delay={160} className="mt-16">
+        <p className="mx-auto max-w-6xl px-6 font-display text-sm font-semibold uppercase tracking-[0.18em] text-red lg:px-8">
+          Recognized By
+        </p>
+        <div className="mt-6">
+          <LogoMarquee />
+        </div>
+      </Reveal>
     </section>
   );
 }
