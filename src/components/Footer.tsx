@@ -6,6 +6,7 @@ const links = [
   { href: "#journey", label: "Journey" },
   { href: "#work", label: "Kathleen's Work" },
   { href: "#achievements", label: "Achievements" },
+  { href: "#donate", label: "Donate" },
   { href: "#contact", label: "Contact" },
 ];
 

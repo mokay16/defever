@@ -7,6 +7,7 @@ import Work from "@/components/Work";
 import PersonalStory from "@/components/PersonalStory";
 import Gallery from "@/components/Gallery";
 import Achievements from "@/components/Achievements";
+import Donate from "@/components/Donate";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <PersonalStory />
         <Gallery />
         <Achievements />
+        <Donate />
         <Contact />
       </main>
       <Footer />

@@ -6,13 +6,34 @@ const fieldClasses =
   "w-full rounded-sm border border-ink/15 bg-paper px-4 py-3 text-ink placeholder:text-ink-soft/50 outline-none transition-colors focus:border-navy";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"error" | "idle" | "sending" | "sent">(
+    "idle",
+  );
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire this up to a real endpoint (e.g. an API route or form
-    // service) once one is chosen. For now we confirm receipt in the UI.
-    setStatus("sent");
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          website: data.get("website"),
+          message: data.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "sent") {
@@ -65,11 +86,19 @@ export default function ContactForm() {
         />
       </div>
 
+      {status === "error" && (
+        <p className="text-sm text-red">
+          Something went wrong sending your message. Please try again in a
+          moment.
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full rounded-sm bg-navy-deep px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-navy sm:w-auto"
+        disabled={status === "sending"}
+        className="w-full rounded-sm bg-navy-deep px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
-        Submit
+        {status === "sending" ? "Sending…" : "Submit"}
       </button>
     </form>
   );

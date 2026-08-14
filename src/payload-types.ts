@@ -45,3 +45,21 @@ export interface User {
   updatedAt: string;
   createdAt: string;
 }
+
+export interface ContactSubmission {
+  id: number;
+  name: string;
+  email: string;
+  website?: string | null;
+  message: string;
+  emailSent?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+
+export interface ContactSettings {
+  id: number;
+  notificationEmails?: { email: string; id?: string | null }[] | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}

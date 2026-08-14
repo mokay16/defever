@@ -66,10 +66,10 @@ export default function Nav() {
         </ul>
 
         <a
-          href="#contact"
+          href="#donate"
           className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-light xl:inline-block"
         >
-          Get Involved
+          Donate
         </a>
 
         <button
@@ -98,11 +98,11 @@ export default function Nav() {
             ))}
           </ul>
           <a
-            href="#contact"
+            href="#donate"
             onClick={() => setOpen(false)}
             className="mt-3 block rounded-sm bg-red px-5 py-3 text-center text-sm font-semibold text-white"
           >
-            Get Involved
+            Donate
           </a>
         </div>
       )}
