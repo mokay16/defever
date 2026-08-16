@@ -57,10 +57,10 @@ export async function POST(request: Request) {
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
-        from: process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev",
+        from: `DefeverTownCouncil <${process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev"}>`,
         to: recipients,
         replyTo: email.trim(),
-        subject: `New message from ${name.trim()} via the campaign site`,
+        subject: `New Message from ${name.trim()} — defeverfortowncouncil.com`,
         text: [
           `Name: ${name.trim()}`,
           `Email: ${email.trim()}`,

@@ -53,6 +53,28 @@ export function PriorityIcon({
           <path d="M4 20c0-6 3-10.5 8-13" />
         </svg>
       );
+    case "building":
+      return (
+        <svg {...base} className={className}>
+          <rect x="5" y="3" width="14" height="18" rx="1" />
+          <path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01" />
+          <path d="M10 21v-4h4v4" />
+        </svg>
+      );
+    case "home":
+      return (
+        <svg {...base} className={className}>
+          <path d="M4 11.5 12 4l8 7.5" />
+          <path d="M6 10v10h12V10" />
+          <path d="M10 20v-6h4v6" />
+        </svg>
+      );
+    case "heart":
+      return (
+        <svg {...base} className={className}>
+          <path d="M12 20S3 14.5 3 8.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 9 1.5C21 14.5 12 20 12 20Z" />
+        </svg>
+      );
     default:
       return null;
   }

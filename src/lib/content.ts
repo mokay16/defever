@@ -29,22 +29,28 @@ export const introParagraphs = [
 
 export const priorities = [
   {
-    title: "Downtown Revitalization",
+    title: "Tiburon Boulevard Traffic",
     description:
-      "Continuing the momentum behind new downtown businesses and a thriving, walkable village center.",
-    icon: "storefront",
-  },
-  {
-    title: "Traffic Management",
-    description:
-      "Improved traffic flow and safety on Tiburon's busiest corridors and intersections.",
+      "Improving traffic flow and safety along Tiburon Boulevard and the town's busiest intersections.",
     icon: "route",
   },
   {
-    title: "Diversity & Inclusion",
+    title: "Fiscal Management & Building Division Efficiency",
     description:
-      "Integrating diversity and inclusion requirements into the town's General Plan for 2040.",
-    icon: "hands",
+      "Disciplined budgeting for the town, and a faster, more efficient Building Division for residents and businesses.",
+    icon: "building",
+  },
+  {
+    title: "Housing",
+    description:
+      "A measured approach to housing that meets the town's obligations while protecting Tiburon's character.",
+    icon: "home",
+  },
+  {
+    title: "Farley Place & Senior Services",
+    description:
+      "Supporting Farley Place and the senior services that let long-time residents stay in the community they helped build.",
+    icon: "heart",
   },
   {
     title: "Fire Prevention & Emergency Preparedness",
@@ -85,6 +91,11 @@ export const journey = [
     year: "2022–Present",
     title: "Reappointed to the Planning Commission",
     body: "Continued shepherding Tiburon's General Plan 2040, including its climate and diversity provisions.",
+  },
+  {
+    year: "2022–Present",
+    title: "Joined the Farley Place Board",
+    body: "Serving on the board of Farley Place, an affordable senior community serving Tiburon and Belvedere.",
   },
   {
     year: "2026",

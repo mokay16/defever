@@ -5,6 +5,7 @@ import { introParagraphs } from "@/lib/content";
 const stats = [
   { value: "10+", label: "Years serving the Tiburon community" },
   { value: "4", label: "Years on the Planning Commission, incl. Chair" },
+  { value: "4", label: "Years on the Farley Place Board, serving local seniors" },
   { value: "1st", label: "Firewise-certified neighborhood, co-founded" },
 ];
 
