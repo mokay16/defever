@@ -29,7 +29,7 @@ export default function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
-          ? "bg-navy-deep/95 backdrop-blur-sm shadow-[0_1px_0_0_rgba(199,154,43,0.3)]"
+          ? "bg-navy-deep/95 backdrop-blur-sm shadow-[0_1px_0_0_rgba(198,49,59,0.3)]"
           : "bg-transparent"
       }`}
     >
@@ -67,7 +67,7 @@ export default function Nav() {
 
         <a
           href="#donate"
-          className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-navy-deep transition-colors hover:bg-red-light xl:inline-block"
+          className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-light xl:inline-block"
         >
           Donate
         </a>
@@ -100,7 +100,7 @@ export default function Nav() {
           <a
             href="#donate"
             onClick={() => setOpen(false)}
-            className="mt-3 block rounded-sm bg-red px-5 py-3 text-center text-sm font-semibold text-navy-deep"
+            className="mt-3 block rounded-sm bg-red px-5 py-3 text-center text-sm font-semibold text-white"
           >
             Donate
           </a>
