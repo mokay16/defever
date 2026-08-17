@@ -25,7 +25,7 @@ export default function Hero() {
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy-deep lg:hidden"
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black lg:hidden"
         />
       </div>
 
@@ -36,13 +36,13 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, rgba(19,42,76,0.95) 0%, rgba(19,42,76,0.72) 40%, rgba(19,42,76,0.32) 68%, rgba(19,42,76,0.12) 100%), linear-gradient(180deg, rgba(19,42,76,0.05) 0%, rgba(19,42,76,0.12) 55%, rgba(19,42,76,0.9) 100%)",
+            "linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.62) 40%, rgba(0,0,0,0.32) 68%, rgba(0,0,0,0.08) 100%), linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.82) 100%)",
         }}
       />
 
       <div className="relative mx-auto max-w-6xl px-6 pt-10 lg:px-8 lg:pt-0">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full border border-red/40 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-red-light">
+          <span className="inline-flex items-center gap-2 rounded-full border border-hero-yellow/40 bg-white/5 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-hero-yellow-light">
             {site.office} &middot; {site.electionYear}
           </span>
         </Reveal>
@@ -54,7 +54,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={180}>
-          <p className="mt-5 max-w-xl font-display text-2xl uppercase tracking-wide text-red-light sm:text-3xl">
+          <p className="mt-5 max-w-xl font-display text-2xl uppercase tracking-wide text-hero-yellow-light sm:text-3xl">
             For {site.office}
           </p>
         </Reveal>
@@ -69,14 +69,14 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#priorities"
-              className="inline-flex items-center gap-2 rounded-sm bg-red px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-light"
+              className="inline-flex items-center gap-2 rounded-sm bg-hero-yellow px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-navy-deep transition-colors hover:bg-hero-yellow-light"
             >
               See the Priorities
               <ArrowIcon className="h-4 w-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-sm border border-white/25 px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:border-red-light hover:text-red-light"
+              className="inline-flex items-center gap-2 rounded-sm border border-white/25 px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:border-hero-yellow-light hover:text-hero-yellow-light"
             >
               Get Involved
             </a>
@@ -87,7 +87,7 @@ export default function Hero() {
           <ul className="mt-16 grid gap-x-8 gap-y-3 border-t border-white/10 pt-8 text-sm text-paper/70 sm:grid-cols-3">
             {credentials.map((item) => (
               <li key={item} className="flex items-start gap-2">
-                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-red-light" />
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-hero-yellow-light" />
                 {item}
               </li>
             ))}

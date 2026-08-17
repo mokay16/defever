@@ -3,10 +3,12 @@
 :root {
   --color-ink: #17222c;
   --color-ink-soft: #4b5763;
-  --color-navy: #1f3f6c;
-  --color-navy-deep: #132a4c;
-  --color-red: #c6313b;
-  --color-red-light: #e2646d;
+  --color-navy: #7c2438;
+  --color-navy-deep: #3d0f17;
+  --color-red: #c79a2b;
+  --color-red-light: #e0be5e;
+  --color-hero-yellow: #ffc72c;
+  --color-hero-yellow-light: #ffd966;
   --color-paper: #f7f2e7;
   --color-paper-alt: #efe7d4;
   --color-white: #ffffff;
@@ -19,6 +21,8 @@
   --color-navy-deep: var(--color-navy-deep);
   --color-red: var(--color-red);
   --color-red-light: var(--color-red-light);
+  --color-hero-yellow: var(--color-hero-yellow);
+  --color-hero-yellow-light: var(--color-hero-yellow-light);
   --color-paper: var(--color-paper);
   --color-paper-alt: var(--color-paper-alt);
   --font-display: var(--font-oswald);

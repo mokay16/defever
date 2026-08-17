@@ -17,7 +17,7 @@ export default function Priorities() {
           {priorities.map((item, i) => (
             <Reveal key={item.title} delay={i * 90} className="h-full">
               <div className="group h-full rounded-md border border-ink/10 bg-white p-7 transition-colors hover:border-red/40">
-                <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-red/10 text-red transition-colors group-hover:bg-red group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-red/10 text-red transition-colors group-hover:bg-red group-hover:text-navy-deep">
                   <PriorityIcon name={item.icon} className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold uppercase tracking-wide text-ink">
