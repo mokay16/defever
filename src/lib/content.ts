@@ -42,9 +42,9 @@ export const priorities = [
     icon: "home",
   },
   {
-    title: "Farley Place & Senior Services",
+    title: "Improving Senior Services",
     description:
-      "Improving services for seniors at Farley Place, helping long-time residents stay in the community they helped build.",
+      "Improving services for seniors across Tiburon, so long-time residents can stay in the community they helped build.",
     icon: "heart",
   },
   {
@@ -121,7 +121,6 @@ export const memberships = [
 
 export const stats = [
   { value: "8+", label: "Years serving Tiburon, incl. as Planning Commission Chair" },
-  { value: "4", label: "Years on the Farley Place Board, serving local seniors" },
   { value: "6", label: "Years as President, Tiburon-Belvedere Rotary" },
   { value: "1st", label: "Firewise-certified neighborhood, co-founded" },
 ];
