@@ -53,6 +53,12 @@ export default function Hero() {
           </h1>
         </Reveal>
 
+        <Reveal delay={140}>
+          <p className="mt-2 font-mono text-sm uppercase tracking-[0.15em] text-paper/60">
+            {site.occupationTitle}
+          </p>
+        </Reveal>
+
         <Reveal delay={180}>
           <p className="mt-5 max-w-xl font-display text-2xl uppercase tracking-wide text-red-light sm:text-3xl">
             For {site.office}
