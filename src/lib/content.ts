@@ -4,7 +4,7 @@ export const site = {
   office: "Tiburon Town Council",
   electionYear: "2026",
   tagline:
-    "Ten years of service to Tiburon. A record of showing up, listening, and getting things done.",
+    "Over 8 years of service to Tiburon. A record of showing up, listening, and getting things done.",
   address: ["1550 G Tiburon Boulevard", "#500", "Tiburon, CA 94920", "USA"],
   social: [
     { label: "Facebook", href: "#" },
@@ -21,7 +21,7 @@ export const credentials = [
 ];
 
 export const introParagraphs = [
-  "Kathleen has been active in the Tiburon community for over ten years – service to her community is not only a priority in her life, but also a pleasure. She has served on the Tiburon Planning Commission for over 8 years – and as Chair for the past year. She's President of the Tiburon-Belvedere Rotary Club, a non-profit service organization.",
+  "Kathleen has been active in the Tiburon community for over 8 years – service to her community is not only a priority in her life, but also a pleasure. She has served on the Tiburon Planning Commission for over 8 years – and as Chair for the past year. She's President of the Tiburon-Belvedere Rotary Club, a non-profit service organization.",
   "During Kathleen's tenure with the Planning Commission, she has approved many new downtown businesses for operations. As a result, downtown Tiburon is now undergoing an unprecedented, much-needed revitalization. Kathleen loves her work on the Planning Commission and is able to claim a nearly perfect attendance record for the meetings for the past four years.",
   "Kathleen prioritizes fire safety and emergency preparedness. In her private law practice, she advocates for California fire victims. In her free time, she successfully certified her neighborhood as a nationally-recognized Firewise community – proving that Kathleen does not just talk about the need for fire safety – she actively works toward fire prevention.",
   "Kathleen is also the President of the Tiburon-Belvedere Rotary, a non-profit organization dedicated solely to service to the community.",
@@ -44,7 +44,7 @@ export const priorities = [
   {
     title: "Farley Place & Senior Services",
     description:
-      "Supporting Farley Place and the senior services that let long-time residents stay in the community they helped build.",
+      "Improving services for seniors at Farley Place, helping long-time residents stay in the community they helped build.",
     icon: "heart",
   },
   {
@@ -66,6 +66,11 @@ export const journey = [
     year: "2018",
     title: "Appointed to the Planning Commission",
     body: "Began reviewing land use, permits, and long-range planning for the Town of Tiburon.",
+  },
+  {
+    year: "2020–Present",
+    title: "Elected President, Rotary Club of Tiburon-Belvedere",
+    body: "Leading a non-profit organization of professionals dedicated to integrity and \"service above self.\"",
   },
   {
     year: "2020–21",
@@ -102,7 +107,11 @@ export const aboutKathleen = [
 ];
 
 export const achievements = [
-  "Education and Qualifications: Tiburon Planning Commission, 2018-Present; DePaul University (B.A., J.D.), University of Connecticut (L.L.M.), International Insurance Law PhD, 2023-Present. I manage a law practice and an advisory firm, MisInsured, representing only insurance consumers.",
+  "Tiburon Planning Commission, 2018-Present",
+  "DePaul University (B.A., J.D.)",
+  "University of Connecticut (L.L.M.)",
+  "International Insurance Law PhD, 2023-Present",
+  "Manages her own law practice, Defever Law, and an advisory firm, MisInsured, representing only insurance consumers – never insurance companies",
 ];
 
 export const memberships = [
@@ -111,8 +120,7 @@ export const memberships = [
 ];
 
 export const stats = [
-  { value: "10+", label: "Years serving the Tiburon community" },
-  { value: "8", label: "Years on the Planning Commission, incl. Chair" },
+  { value: "8+", label: "Years serving Tiburon, incl. as Planning Commission Chair" },
   { value: "4", label: "Years on the Farley Place Board, serving local seniors" },
   { value: "6", label: "Years as President, Tiburon-Belvedere Rotary" },
   { value: "1st", label: "Firewise-certified neighborhood, co-founded" },

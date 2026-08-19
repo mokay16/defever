@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteTitle}`,
   },
   description:
-    "Kathleen DeFever is running for Tiburon Town Council in 2026 — Planning Commission Chair, Rotary President, and a decade of service to the Tiburon community.",
+    "Kathleen DeFever is running for Tiburon Town Council in 2026 — Planning Commission Chair, Rotary President, and over 8 years of service to the Tiburon community.",
   openGraph: {
     title: siteTitle,
     description:
-      "Planning Commission Chair, Rotary President, and a decade of service to the Tiburon community.",
+      "Planning Commission Chair, Rotary President, and over 8 years of service to the Tiburon community.",
     type: "website",
   },
 };

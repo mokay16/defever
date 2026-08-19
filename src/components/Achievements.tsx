@@ -39,11 +39,11 @@ export default function Achievements() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Credentials"
-          title="Achievements & memberships"
+          title="Education & Qualifications"
         />
 
         <div className="mt-14 grid gap-12 sm:grid-cols-2">
-          <ListBlock title="Achievements" items={achievements} delayStart={0} />
+          <ListBlock title="Education & Qualifications" items={achievements} delayStart={0} />
           <ListBlock title="Memberships" items={memberships} delayStart={80} />
         </div>
       </div>

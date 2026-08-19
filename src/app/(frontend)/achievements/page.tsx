@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Achievements from "@/components/Achievements";
 
 export const metadata: Metadata = {
-  title: "Achievements",
+  title: "Education & Qualifications",
 };
 
 export default function AchievementsPage() {
