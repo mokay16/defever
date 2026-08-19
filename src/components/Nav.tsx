@@ -2,21 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { site } from "@/lib/content";
 import { CloseIcon, MenuIcon } from "./icons";
 
 const links = [
-  { href: "#priorities", label: "Priorities" },
-  { href: "#about", label: "About" },
-  { href: "#journey", label: "Journey" },
-  { href: "#work", label: "Kathleen's Work" },
-  { href: "#achievements", label: "Achievements" },
-  { href: "#contact", label: "Contact" },
+  { href: "/priorities", label: "Priorities" },
+  { href: "/about", label: "About" },
+  { href: "/journey", label: "Journey" },
+  { href: "/achievements", label: "Achievements" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -25,16 +28,30 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu on navigation — the header persists across route
+  // changes, so nothing else resets this state. Adjusted during render
+  // (not an effect) per React's guidance for resetting state on prop change.
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
+  // Every page but Home starts with solid content at the very top (no
+  // full-bleed photo to be transparent over), so the header stays solid
+  // there regardless of scroll position.
+  const solid = scrolled || open || !isHome;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open
+        solid
           ? "bg-navy-deep/95 backdrop-blur-sm shadow-[0_1px_0_0_rgba(198,49,59,0.3)]"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/site-logo.png"
             alt="Kathleen DeFever for Tiburon Town Council"
@@ -50,27 +67,29 @@ export default function Nav() {
               {site.office} &middot; {site.electionYear}
             </span>
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-9 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
-                className="text-sm uppercase tracking-[0.08em] text-paper/85 transition-colors hover:text-red-light"
+                className={`text-sm uppercase tracking-[0.08em] transition-colors hover:text-red-light ${
+                  pathname === link.href ? "text-red-light" : "text-paper/85"
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        <a
-          href="#donate"
+        <Link
+          href="/donate"
           className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-light xl:inline-block"
         >
           Donate
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -87,23 +106,23 @@ export default function Nav() {
           <ul className="flex flex-col gap-1">
             {links.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 text-base uppercase tracking-[0.08em] text-paper/85"
+                  className={`block py-3 text-base uppercase tracking-[0.08em] ${
+                    pathname === link.href ? "text-red-light" : "text-paper/85"
+                  }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
-          <a
-            href="#donate"
-            onClick={() => setOpen(false)}
+          <Link
+            href="/donate"
             className="mt-3 block rounded-sm bg-red px-5 py-3 text-center text-sm font-semibold text-white"
           >
             Donate
-          </a>
+          </Link>
         </div>
       )}
     </header>

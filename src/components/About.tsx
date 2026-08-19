@@ -1,14 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { introParagraphs } from "@/lib/content";
-
-const stats = [
-  { value: "10+", label: "Years serving the Tiburon community" },
-  { value: "8", label: "Years on the Planning Commission, incl. Chair" },
-  { value: "4", label: "Years on the Farley Place Board, serving local seniors" },
-  { value: "6", label: "Years as President, Tiburon-Belvedere Rotary" },
-  { value: "1st", label: "Firewise-certified neighborhood, co-founded" },
-];
+import { introParagraphs, stats } from "@/lib/content";
 
 export default function About() {
   return (

@@ -1,13 +1,13 @@
+import Link from "next/link";
 import { site } from "@/lib/content";
 
 const links = [
-  { href: "#priorities", label: "Priorities" },
-  { href: "#about", label: "About" },
-  { href: "#journey", label: "Journey" },
-  { href: "#work", label: "Kathleen's Work" },
-  { href: "#achievements", label: "Achievements" },
-  { href: "#donate", label: "Donate" },
-  { href: "#contact", label: "Contact" },
+  { href: "/priorities", label: "Priorities" },
+  { href: "/about", label: "About" },
+  { href: "/journey", label: "Journey" },
+  { href: "/achievements", label: "Achievements" },
+  { href: "/donate", label: "Donate" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -27,22 +27,22 @@ export default function Footer() {
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {links.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="text-sm text-paper/70 transition-colors hover:text-red-light"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-sm text-paper/70 transition-colors hover:text-red-light"
           >
-            Back to top ↑
-          </a>
+            Home ↑
+          </Link>
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-xs leading-relaxed text-paper/45">

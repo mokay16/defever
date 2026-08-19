@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -19,7 +21,10 @@ const inter = Inter({
 const siteTitle = "Kathleen DeFever for Tiburon Town Council";
 
 export const metadata: Metadata = {
-  title: siteTitle,
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteTitle}`,
+  },
   description:
     "Kathleen DeFever is running for Tiburon Town Council in 2026 — Planning Commission Chair, Rotary President, and a decade of service to the Tiburon community.",
   openGraph: {
@@ -37,7 +42,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
-        {children}
+        <Nav />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
