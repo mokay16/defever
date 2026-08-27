@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import Endorsements from "@/components/Endorsements";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { ArrowIcon, PriorityIcon } from "@/components/icons";
@@ -12,6 +13,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+
+      <Endorsements />
 
       <section className="bg-paper py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">

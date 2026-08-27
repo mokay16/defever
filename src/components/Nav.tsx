@@ -8,6 +8,7 @@ import { site } from "@/lib/content";
 import { CloseIcon, MenuIcon } from "./icons";
 
 const links = [
+  { href: "/endorsements", label: "Endorsements" },
   { href: "/priorities", label: "Priorities" },
   { href: "/about", label: "About" },
   { href: "/journey", label: "Journey" },
@@ -54,7 +55,7 @@ export default function Nav() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/site-logo.png"
-            alt="Kathleen DeFever for Tiburon Town Council"
+            alt="Kathleen Defever for Tiburon Town Council"
             width={44}
             height={44}
             className="rounded-sm border border-white/15"

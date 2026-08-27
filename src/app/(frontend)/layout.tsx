@@ -18,7 +18,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteTitle = "Kathleen DeFever for Tiburon Town Council";
+const siteTitle = "Kathleen Defever for Tiburon Town Council";
 
 export const metadata: Metadata = {
   title: {
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteTitle}`,
   },
   description:
-    "Kathleen DeFever is running for Tiburon Town Council in 2026 — Planning Commission Chair, Rotary President, and over 8 years of service to the Tiburon community.",
+    "Kathleen Defever is running for Tiburon Town Council in 2026 — Planning Commissioner, Rotary President, and over 8 years of service to the Tiburon community.",
   openGraph: {
     title: siteTitle,
     description:
-      "Planning Commission Chair, Rotary President, and over 8 years of service to the Tiburon community.",
+      "Planning Commissioner, Rotary President, and over 8 years of service to the Tiburon community.",
     type: "website",
   },
 };

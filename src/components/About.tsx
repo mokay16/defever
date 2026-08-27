@@ -8,7 +8,7 @@ export default function About() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Community Leader"
-          title="A decade of service, on the record"
+          title="Over 8 years of service, on the record"
         />
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-16">

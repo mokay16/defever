@@ -1,5 +1,5 @@
 export const site = {
-  candidateName: "Kathleen DeFever",
+  candidateName: "Kathleen Defever",
   occupationTitle: "Attorney / Planning Commissioner",
   office: "Tiburon Town Council",
   electionYear: "2026",
@@ -15,13 +15,14 @@ export const site = {
 };
 
 export const credentials = [
-  "Chair, Tiburon Planning Commission",
+  "Planning Commissioner, Town of Tiburon",
   "President, Tiburon-Belvedere Rotary",
+  "Board Member, Farley Place",
   "Co-Founder, Firewise Community",
 ];
 
 export const introParagraphs = [
-  "Kathleen has been active in the Tiburon community for over 8 years – service to her community is not only a priority in her life, but also a pleasure. She has served on the Tiburon Planning Commission for over 8 years – and as Chair for the past year. She's President of the Tiburon-Belvedere Rotary Club, a non-profit service organization.",
+  "Kathleen has been active in the Tiburon community for over 8 years – service to her community is not only a priority in her life, but also a pleasure. She has served on the Tiburon Planning Commission for over 8 years. She's President of the Tiburon-Belvedere Rotary Club, a non-profit service organization.",
   "During Kathleen's tenure with the Planning Commission, she has approved many new downtown businesses for operations. As a result, downtown Tiburon is now undergoing an unprecedented, much-needed revitalization. Kathleen loves her work on the Planning Commission and is able to claim a nearly perfect attendance record for the meetings for the past four years.",
   "Kathleen prioritizes fire safety and emergency preparedness. In her private law practice, she advocates for California fire victims. In her free time, she successfully certified her neighborhood as a nationally-recognized Firewise community – proving that Kathleen does not just talk about the need for fire safety – she actively works toward fire prevention.",
   "Kathleen is also the President of the Tiburon-Belvedere Rotary, a non-profit organization dedicated solely to service to the community.",
@@ -75,17 +76,12 @@ export const journey = [
   {
     year: "2020–21",
     title: "Elected Chair of the Planning Commission",
-    body: "Led the review of dozens of downtown business permits during a critical revitalization period.",
+    body: "Led the review of dozens of downtown business permits during a critical revitalization period. The chair role rotates among commissioners each term.",
   },
   {
     year: "2021",
     title: "Co-led Tiburon's first Firewise-certified neighborhood",
     body: "Built one of the peninsula's earliest nationally recognized fire-safety certifications, block by block.",
-  },
-  {
-    year: "2022–Present",
-    title: "Reappointed to the Planning Commission",
-    body: "Continued shepherding Tiburon's General Plan, including its climate and diversity provisions.",
   },
   {
     year: "2022–Present",
@@ -101,9 +97,9 @@ export const journey = [
 
 export const aboutKathleen = [
   "Kathleen grew up on a beautiful farm in Michigan, where she learned a true sense of honesty and community from her humble, small-town Midwestern roots. She moved to Tiburon almost twenty years ago, drawn to its natural beauty and world-class sophistication, and has called it home ever since.",
-  "Kathleen manages her own law practice, Defever Law, and an advisory firm, MisInsured, representing only insurance consumers – never insurance companies. She began her law career defending federal criminals with the prestigious Federal Criminal Defender's Office in Chicago, Illinois, before shifting to a nationwide practice in Plaintiff's Insurance Litigation, helping both the disabled and those who lost their homes to fires and floods – most recently victims of the Tubbs and Glass Fires in Napa and Sonoma County. She holds a B.A. and J.D. from DePaul University and an LL.M. in Insurance Law from the University of Connecticut, and is currently pursuing a Ph.D. in International Insurance Law (2023–Present).",
+  "Kathleen manages her own law practice, Defever Law, and an advisory firm, MisInsured, representing only insurance consumers – never insurance companies. She began her law career defending federal criminals with the prestigious Federal Criminal Defender's Office in Chicago, Illinois, before shifting to a nationwide practice in Plaintiff's Insurance Litigation, helping both the disabled and those who lost their homes to fires and floods – most recently victims of the Malibu and Altadena Fires in Southern California. She holds a B.A. and J.D. from DePaul University and an LL.M. in Insurance Law from the University of Connecticut, and is currently pursuing a Ph.D. in International Insurance Law (2023–Present).",
   "Kathleen believes in service above self. She's the six-year President of the Rotary Club of Tiburon-Belvedere, a four-year Board Member of Farley Place – an affordable Senior Community serving Tiburon and Belvedere – and a dedicated advocate for wildfire safety, representing wildfire victims in her practice while leading her own neighborhood to Firewise USA certification.",
-  "Kathleen loves to read about history, sociology, psychology, and economics – and is working on an exciting book which combines these passions. She also loves the opera, great wines, track & field, French and Italian food, and learning new languages. So far she is proficient in French and Spanish – with Italian, Dutch, and Bahasa Indonesia next on her list.",
+  "Kathleen loves to read about history, sociology, psychology, and economics. She also loves the opera, great wines, wellness and spirituality, and French and Italian food. She speaks intermediate French and some Spanish.",
 ];
 
 export const achievements = [
@@ -117,11 +113,23 @@ export const achievements = [
 export const memberships = [
   "Association Internationale de Droit des Assurances – International Association of Insurance Law",
   "California Bar Association",
+  "Rotary International",
+  "Marin Women's Political Action Committee",
+  "American Women's Club Brussels",
 ];
 
 export const stats = [
-  { value: "8+", label: "Years serving Tiburon, incl. as Planning Commission Chair" },
+  { value: "8+", label: "Years serving Tiburon on the Planning Commission" },
   { value: "4", label: "Years on the Farley Place Board, serving local seniors" },
   { value: "6", label: "Years as President, Tiburon-Belvedere Rotary" },
   { value: "1st", label: "Firewise-certified neighborhood, co-founded" },
+];
+
+// Kathleen is actively collecting more of these — update as new ones come in.
+export const endorsements = [
+  { name: "Holli Thier", title: "Tiburon Town Council" },
+  { name: "Alice Fredericks", title: "Tiburon Town Council" },
+  { name: "Erica Williams", title: "Tiburon Planning Commission" },
+  { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
+  { name: "Jerry Riessen", title: "Tiburon Open Space" },
 ];

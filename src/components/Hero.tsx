@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="relative h-[420px] w-full sm:h-[480px] lg:absolute lg:inset-0 lg:h-auto">
         <Image
           src="/kathleen-hero.png"
-          alt="Kathleen DeFever holding a Tiburon Town Council campaign sign, with the San Francisco Bay behind her"
+          alt="Kathleen Defever holding a Tiburon Town Council campaign sign, with the San Francisco Bay behind her"
           fill
           priority
           sizes="100vw"

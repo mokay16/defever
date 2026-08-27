@@ -17,7 +17,7 @@ export default function PersonalStory() {
             <div className="relative aspect-[2/3] w-full overflow-hidden rounded-md border border-ink/10">
               <Image
                 src="/about_Kathleen.png"
-                alt="Kathleen DeFever"
+                alt="Kathleen Defever"
                 fill
                 sizes="(min-width: 1024px) 30vw, 60vw"
                 className="object-cover"
