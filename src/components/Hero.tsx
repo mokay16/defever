@@ -22,7 +22,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[55%_18%] lg:object-[62%_15%]"
+          className="object-cover object-[42%_26%] lg:translate-x-[195px] lg:-translate-y-[103px] lg:scale-[1.25]"
         />
         <div
           aria-hidden
