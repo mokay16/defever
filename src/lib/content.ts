@@ -132,4 +132,5 @@ export const endorsements = [
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
   { name: "Jerry Riessen", title: "Tiburon Open Space" },
+  { name: "Krupa Antani", title: "RUSD Governing Board of Trustees Candidate" },
 ];

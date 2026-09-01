@@ -17,12 +17,12 @@ export default function Hero() {
       */}
       <div className="relative h-[420px] w-full sm:h-[480px] lg:absolute lg:inset-0 lg:h-auto">
         <Image
-          src="/kathleen-hero.png"
-          alt="Kathleen Defever holding a Tiburon Town Council campaign sign, with the San Francisco Bay behind her"
+          src="/kathleen-hero.jpeg"
+          alt="Kathleen Defever standing outdoors on a wooded Tiburon hillside"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[68%_15%] lg:object-[78%_28%]"
+          className="object-cover object-[55%_18%] lg:object-[62%_15%]"
         />
         <div
           aria-hidden
