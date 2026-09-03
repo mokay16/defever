@@ -16,7 +16,7 @@ export default function PersonalStory() {
           <Reveal delay={120} className="max-w-xs lg:max-w-none">
             <div className="relative aspect-[2/3] w-full overflow-hidden rounded-md border border-ink/10">
               <Image
-                src="/about_Kathleen.png"
+                src="/kathleen-standing.jpeg"
                 alt="Kathleen Defever"
                 fill
                 sizes="(min-width: 1024px) 30vw, 60vw"
