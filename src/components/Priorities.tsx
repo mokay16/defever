@@ -1,3 +1,4 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { PriorityIcon } from "./icons";
@@ -7,10 +8,12 @@ export default function Priorities() {
   return (
     <section id="priorities" className="bg-paper py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <Breadcrumbs label="Priorities" path="/priorities" />
         <SectionHeading
           eyebrow="On the Council"
           title="What Kathleen will champion"
           description="A platform built from over 8 years of showing up — on the Planning Commission, in the community, and for Tiburon's neighborhoods."
+          headingLevel={1}
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

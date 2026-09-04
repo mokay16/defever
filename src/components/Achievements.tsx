@@ -1,3 +1,4 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { achievements, memberships } from "@/lib/content";
@@ -36,9 +37,11 @@ export default function Achievements() {
   return (
     <section id="achievements" className="bg-paper-alt py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <Breadcrumbs label="Education & Qualifications" path="/achievements" />
         <SectionHeading
           eyebrow="Credentials"
           title="Education & Qualifications"
+          headingLevel={1}
         />
 
         <div className="mt-14 grid gap-12 sm:grid-cols-2">

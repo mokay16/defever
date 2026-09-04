@@ -80,45 +80,6 @@ export function PriorityIcon({
   }
 }
 
-export function SocialIcon({
-  label,
-  className,
-}: IconProps & { label: string }) {
-  switch (label.toLowerCase()) {
-    case "facebook":
-      return (
-        <svg {...base} className={className}>
-          <path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.7-1.5H17V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2H8.5v3H11v7h3Z" />
-        </svg>
-      );
-    case "twitter":
-    case "x":
-      return (
-        <svg {...base} className={className}>
-          <path d="M4 4 20 20" />
-          <path d="M20 4 4 20" />
-        </svg>
-      );
-    case "instagram":
-      return (
-        <svg {...base} className={className}>
-          <rect x="4" y="4" width="16" height="16" rx="4" />
-          <circle cx="12" cy="12" r="3.5" />
-          <circle cx="16.5" cy="7.5" r="0.6" fill="currentColor" stroke="none" />
-        </svg>
-      );
-    case "linkedin":
-      return (
-        <svg {...base} className={className}>
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M8 10.5V17M8 7.5v.01M12 17v-4a2 2 0 0 1 4 0v4M12 13v4" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
-
 export function MenuIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>

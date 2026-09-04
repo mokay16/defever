@@ -1,15 +1,22 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { endorsements } from "@/lib/content";
 
-export default function Endorsements() {
+export default function Endorsements({
+  standalone = false,
+}: {
+  standalone?: boolean;
+}) {
   return (
     <section className="bg-paper-alt py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        {standalone && <Breadcrumbs label="Endorsements" path="/endorsements" />}
         <SectionHeading
           eyebrow="Who's Behind Kathleen"
           title="Endorsements"
           description="Local leaders who know Kathleen's record and are backing her campaign."
+          headingLevel={standalone ? 1 : 2}
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

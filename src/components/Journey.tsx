@@ -1,3 +1,4 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { journey } from "@/lib/content";
@@ -6,10 +7,12 @@ export default function Journey() {
   return (
     <section id="journey" className="bg-paper py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <Breadcrumbs label="Journey" path="/journey" />
         <SectionHeading
           eyebrow="The Record"
           title="Eight years of steady bearings on this Council's biggest questions"
           description="A real record, plotted in order — not a slogan."
+          headingLevel={1}
         />
 
         <div className="relative mt-16 max-w-2xl">

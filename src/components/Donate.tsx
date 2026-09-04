@@ -1,4 +1,5 @@
 import Script from "next/script";
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { site } from "@/lib/content";
@@ -16,10 +17,12 @@ export default function Donate() {
   return (
     <section id="donate" className="bg-paper py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <Breadcrumbs label="Donate" path="/donate" />
         <SectionHeading
           eyebrow="Support the Campaign"
           title="Chip in for Tiburon"
           description="Every contribution goes directly toward reaching Tiburon voters before the election — no amount is too small."
+          headingLevel={1}
         />
 
         <Reveal delay={140} className="mt-14">

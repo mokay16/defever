@@ -5,12 +5,16 @@ export default function SectionHeading({
   title,
   description,
   light = false,
+  headingLevel = 2,
 }: {
   eyebrow: string;
   title: string;
   description?: string;
   light?: boolean;
+  headingLevel?: 1 | 2;
 }) {
+  const HeadingTag = headingLevel === 1 ? "h1" : "h2";
+
   return (
     <div className="max-w-2xl">
       <Reveal>
@@ -23,13 +27,13 @@ export default function SectionHeading({
         </span>
       </Reveal>
       <Reveal delay={80}>
-        <h2
+        <HeadingTag
           className={`mt-3 font-display text-3xl font-semibold uppercase leading-tight tracking-wide sm:text-4xl ${
             light ? "text-white" : "text-ink"
           }`}
         >
           {title}
-        </h2>
+        </HeadingTag>
       </Reveal>
       {description && (
         <Reveal delay={140}>

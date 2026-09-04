@@ -1,16 +1,17 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
 import { site } from "@/lib/content";
-import { SocialIcon } from "./icons";
 
 export default function Contact() {
   return (
     <section id="contact" className="bg-navy-deep py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <Breadcrumbs label="Contact" path="/contact" light />
         <div className="grid gap-14 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <div>
-            <SectionHeading eyebrow="Get in Touch" title="Contact" light />
+            <SectionHeading eyebrow="Get in Touch" title="Contact" light headingLevel={1} />
 
             <Reveal delay={140} className="mt-8">
               <address className="not-italic leading-relaxed text-paper/75">
@@ -20,19 +21,6 @@ export default function Contact() {
                   </span>
                 ))}
               </address>
-            </Reveal>
-
-            <Reveal delay={200} className="mt-8 flex gap-3">
-              {site.social.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-paper/80 transition-colors hover:border-red-light hover:text-red-light"
-                >
-                  <SocialIcon label={s.label} className="h-4 w-4" />
-                </a>
-              ))}
             </Reveal>
           </div>
 

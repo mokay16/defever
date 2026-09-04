@@ -17,7 +17,7 @@ export default function PersonalStory() {
             <div className="relative aspect-[2/3] w-full overflow-hidden rounded-md border border-ink/10">
               <Image
                 src="/kathleen-standing.jpeg"
-                alt="Kathleen Defever"
+                alt="Kathleen Defever, candidate for Tiburon Town Council"
                 fill
                 sizes="(min-width: 1024px) 30vw, 60vw"
                 className="object-cover"

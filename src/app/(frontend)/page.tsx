@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import Endorsements from "@/components/Endorsements";
@@ -5,6 +6,12 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { ArrowIcon, PriorityIcon } from "@/components/icons";
 import { introParagraphs, priorities, stats } from "@/lib/content";
+
+export const metadata: Metadata = {
+  description:
+    "Kathleen Defever is running for Tiburon Town Council in 2026 — Planning Commissioner, Rotary President, and over 8 years of service to the Tiburon community.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   const topPriorities = priorities.slice(0, 3);

@@ -1,3 +1,4 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { introParagraphs, stats } from "@/lib/content";
@@ -6,9 +7,11 @@ export default function About() {
   return (
     <section id="about" className="bg-paper-alt py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <Breadcrumbs label="About" path="/about" />
         <SectionHeading
           eyebrow="Community Leader"
           title="Over 8 years of service, on the record"
+          headingLevel={1}
         />
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-16">
