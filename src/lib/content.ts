@@ -17,7 +17,7 @@ export const credentials = [
 
 export const introParagraphs = [
   "Kathleen has been active in the Tiburon community for over 8 years – service to her community is not only a priority in her life, but also a pleasure. She has served on the Tiburon Planning Commission for over 8 years. She's President of the Tiburon-Belvedere Rotary Club, a non-profit service organization.",
-  "During Kathleen's tenure with the Planning Commission, she has approved many new downtown businesses for operations. As a result, downtown Tiburon is now undergoing an unprecedented, much-needed revitalization. Kathleen loves her work on the Planning Commission and is able to claim a nearly perfect attendance record for the meetings for the past four years.",
+  "During Kathleen's tenure with the Planning Commission, she has approved many new downtown businesses for operations. As a result, downtown Tiburon is now undergoing an unprecedented, much-needed revitalization. Kathleen loves her work on the Planning Commission.",
   "Kathleen prioritizes fire safety and emergency preparedness. In her private law practice, she advocates for California fire victims. In her free time, she successfully certified her neighborhood as a nationally-recognized Firewise community – proving that Kathleen does not just talk about the need for fire safety – she actively works toward fire prevention.",
   "Kathleen is also the President of the Tiburon-Belvedere Rotary, a non-profit organization dedicated solely to service to the community.",
   "When she is not serving her community, Kathleen is a successful, internationally-recognized consumer insurance attorney, most recently assisting dozens of fire victims every year in their pursuit of recovery from the devastating California wildfires.",
