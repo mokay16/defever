@@ -121,7 +121,6 @@ export const stats = [
 
 // Kathleen is actively collecting more of these — update as new ones come in.
 export const endorsements = [
-  { name: "Holli Thier", title: "Tiburon Town Council" },
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
