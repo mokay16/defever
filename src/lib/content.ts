@@ -136,4 +136,9 @@ export const endorsements: { name: string; title: string; logo?: string }[] = [
     title: "IAFF Local 1775",
     logo: "/marin-firefighters-logo.png",
   },
+  {
+    name: "Marin Women's PAC",
+    title: "Political Action Committee",
+    logo: "/marin-womens-pac-logo.png",
+  },
 ];
