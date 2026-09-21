@@ -126,4 +126,9 @@ export const endorsements = [
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
   { name: "Jerry Riessen", title: "Tiburon Open Space" },
   { name: "Krupa Antani", title: "RUSD Governing Board of Trustees Candidate" },
+  { name: "Ava Fruin", title: "Larkspur Corte Madera School District Board" },
+  { name: "Lynn Fox, PhD", title: "Professor of Psychology" },
+  { name: "Henry McWhinney", title: "Marketing Executive" },
+  { name: "Kalpana Reddy", title: "Wellness Practitioner and Business Owner" },
+  { name: "Jeffrey Schaub", title: "Award-Winning Broadcast Journalist" },
 ];
