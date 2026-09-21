@@ -120,7 +120,7 @@ export const stats = [
 ];
 
 // Kathleen is actively collecting more of these — update as new ones come in.
-export const endorsements = [
+export const endorsements: { name: string; title: string; logo?: string }[] = [
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
@@ -131,4 +131,9 @@ export const endorsements = [
   { name: "Henry McWhinney", title: "Marketing Executive" },
   { name: "Kalpana Reddy", title: "Wellness Practitioner and Business Owner" },
   { name: "Jeffrey Schaub", title: "Award-Winning Broadcast Journalist" },
+  {
+    name: "Marin Professional Firefighters",
+    title: "IAFF Local 1775",
+    logo: "/marin-firefighters-logo.png",
+  },
 ];

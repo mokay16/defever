@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -22,11 +23,24 @@ export default function Endorsements({
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {endorsements.map((person, i) => (
             <Reveal key={person.name} delay={i * 80} className="h-full">
-              <div className="h-full rounded-md border border-ink/10 bg-white p-6">
-                <p className="font-display text-lg font-semibold text-ink">
-                  {person.name}
-                </p>
-                <p className="mt-1 text-sm text-ink-soft">{person.title}</p>
+              <div className="flex h-full items-center gap-4 rounded-md border border-ink/10 bg-white p-6">
+                {person.logo && (
+                  <div className="relative h-14 w-14 shrink-0">
+                    <Image
+                      src={person.logo}
+                      alt={`${person.name} logo`}
+                      fill
+                      sizes="56px"
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+                <div>
+                  <p className="font-display text-lg font-semibold text-ink">
+                    {person.name}
+                  </p>
+                  <p className="mt-1 text-sm text-ink-soft">{person.title}</p>
+                </div>
               </div>
             </Reveal>
           ))}
