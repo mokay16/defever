@@ -11,6 +11,7 @@ import { EndorsementSubmissions } from "./collections/EndorsementSubmissions";
 import { GalleryPhotos } from "./collections/GalleryPhotos";
 import { Users } from "./collections/Users";
 import { ContactSettings } from "./globals/ContactSettings";
+import { ensureProdSchema } from "./lib/ensureProdSchema";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -49,6 +50,7 @@ export default buildConfig({
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db,
+  onInit: ensureProdSchema,
   sharp,
   plugins: [
     // Uploads go to Vercel Blob when BLOB_READ_WRITE_TOKEN is set
