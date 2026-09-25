@@ -8,7 +8,7 @@ export const ContactSettings: GlobalConfig = {
   },
   admin: {
     description:
-      "Add the email address(es) that should receive a copy whenever someone submits the contact form on the site.",
+      "Add the email address(es) that should receive a copy whenever someone submits the contact form or the endorsement form on the site.",
   },
   fields: [
     {

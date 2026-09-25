@@ -7,6 +7,7 @@ import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
 import sharp from "sharp";
 import { ContactSubmissions } from "./collections/ContactSubmissions";
+import { EndorsementSubmissions } from "./collections/EndorsementSubmissions";
 import { GalleryPhotos } from "./collections/GalleryPhotos";
 import { Users } from "./collections/Users";
 import { ContactSettings } from "./globals/ContactSettings";
@@ -40,7 +41,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Users, GalleryPhotos, ContactSubmissions],
+  collections: [Users, GalleryPhotos, ContactSubmissions, EndorsementSubmissions],
   globals: [ContactSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",

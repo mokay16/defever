@@ -57,6 +57,23 @@ export interface ContactSubmission {
   createdAt: string;
 }
 
+export interface EndorsementSubmission {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  title?: string | null;
+  endorsementText?: string | null;
+  addToSupporters?: boolean | null;
+  yardSign?: boolean | null;
+  volunteer?: boolean | null;
+  canvass?: boolean | null;
+  emailUpdates?: boolean | null;
+  emailSent?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+
 export interface ContactSettings {
   id: number;
   notificationEmails?: { email: string; id?: string | null }[] | null;

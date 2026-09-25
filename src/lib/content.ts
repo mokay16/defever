@@ -120,7 +120,14 @@ export const stats = [
 ];
 
 // Kathleen is actively collecting more of these — update as new ones come in.
-export const endorsements: { name: string; title: string; logo?: string }[] = [
+// Set `organization: true` for groups (unions, PACs, newspapers) — they're
+// shown in their own, larger row above the individual endorsers.
+export const endorsements: {
+  name: string;
+  title: string;
+  logo?: string;
+  organization?: boolean;
+}[] = [
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
@@ -131,14 +138,23 @@ export const endorsements: { name: string; title: string; logo?: string }[] = [
   { name: "Henry McWhinney", title: "Marketing Executive" },
   { name: "Kalpana Reddy", title: "Wellness Practitioner and Business Owner" },
   { name: "Jeffrey Schaub", title: "Award-Winning Broadcast Journalist" },
+  { name: "Susan Bolle", title: "Delegate, Marin Democratic Committee" },
+  { name: "Jeff Chanin", title: "Attorney" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
     logo: "/marin-firefighters-logo.png",
+    organization: true,
   },
   {
     name: "Marin Women's PAC",
     title: "Political Action Committee",
     logo: "/marin-womens-pac-logo.png",
+    organization: true,
+  },
+  {
+    name: "Marin Independent Journal",
+    title: "Newspaper",
+    organization: true,
   },
 ];
