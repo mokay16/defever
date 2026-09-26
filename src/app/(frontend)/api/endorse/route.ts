@@ -1,8 +1,7 @@
 import config from "@payload-config";
 import { NextResponse } from "next/server";
 import { getPayload } from "payload";
-import { Resend } from "resend";
-import type { ContactSettings } from "@/payload-types";
+import { sendNotification } from "@/lib/sendNotification";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -58,57 +57,28 @@ export async function POST(request: Request) {
     },
   });
 
-  // Same recipients as the contact form (Payload admin -> Contact Settings).
-  const settings = (await payload.findGlobal({
-    slug: "contact-settings",
-  })) as ContactSettings;
-  const recipients = (settings.notificationEmails || [])
-    .map((entry) => entry.email)
-    .filter((value): value is string => Boolean(value));
-
-  let emailSent = false;
-  if (recipients.length > 0 && process.env.RESEND_API_KEY) {
-    const fullName = `${firstName} ${lastName}`;
-    const selected = OPTIONS.filter(([key]) => options[key]).map(
-      ([, label]) => `- ${label}`,
-    );
-    try {
-      const resend = new Resend(process.env.RESEND_API_KEY);
-      // Resend reports failures (e.g. unverified sender domain) in the
-      // returned `error` rather than throwing, so check it explicitly.
-      const { error } = await resend.emails.send({
-        from: `DefeverTownCouncil <${process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev"}>`,
-        to: recipients,
-        replyTo: email,
-        subject: `New Endorsement from ${fullName} — defever.vercel.app`,
-        text: [
-          `Name: ${fullName}`,
-          `Email: ${email}`,
-          title ? `Title/Organization: ${title}` : null,
-          "",
-          endorsementText ? `Endorsement:\n${endorsementText}` : "(No endorsement text)",
-          "",
-          selected.length > 0 ? `Also:\n${selected.join("\n")}` : null,
-          "",
-          "Review it in Payload admin under Endorsement Submissions before adding it to the site.",
-        ]
-          .filter((line) => line !== null)
-          .join("\n"),
-      });
-      if (error) throw new Error(`Resend: ${error.name} — ${error.message}`);
-      emailSent = true;
-    } catch (error) {
-      console.error("Failed to send endorsement notification email", error);
-    }
-  } else {
-    console.warn(
-      `Endorsement notification skipped: ${
-        recipients.length === 0
-          ? "no Notification Emails set in Contact Settings"
-          : "RESEND_API_KEY is not set"
-      }`,
-    );
-  }
+  const fullName = `${firstName} ${lastName}`;
+  const selected = OPTIONS.filter(([key]) => options[key]).map(
+    ([, label]) => `- ${label}`,
+  );
+  const emailSent = await sendNotification(payload, {
+    label: "Endorsement",
+    replyTo: email,
+    subject: `New Endorsement from ${fullName} — defever.vercel.app`,
+    text: [
+      `Name: ${fullName}`,
+      `Email: ${email}`,
+      title ? `Title/Organization: ${title}` : null,
+      "",
+      endorsementText ? `Endorsement:\n${endorsementText}` : "(No endorsement text)",
+      "",
+      selected.length > 0 ? `Also:\n${selected.join("\n")}` : null,
+      "",
+      "Review it in Payload admin under Endorsement Submissions before adding it to the site.",
+    ]
+      .filter((line) => line !== null)
+      .join("\n"),
+  });
 
   if (emailSent) {
     await payload.update({
