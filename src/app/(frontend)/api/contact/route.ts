@@ -62,7 +62,7 @@ export async function POST(request: Request) {
         from: `DefeverTownCouncil <${process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev"}>`,
         to: recipients,
         replyTo: email.trim(),
-        subject: `New Message from ${name.trim()} — defeverfortowncouncil.com`,
+        subject: `New Message from ${name.trim()} — defever.vercel.app`,
         text: [
           `Name: ${name.trim()}`,
           `Email: ${email.trim()}`,
