@@ -3,6 +3,7 @@ import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import ContactForm from "./ContactForm";
+import { InstagramIcon } from "./icons";
 import { site } from "@/lib/content";
 
 export default function Contact() {
@@ -22,6 +23,15 @@ export default function Contact() {
                   </span>
                 ))}
               </address>
+              <a
+                href={site.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2.5 text-paper/75 transition-colors hover:text-red-light"
+              >
+                <InstagramIcon className="h-5 w-5" />
+                @kathleen_defever
+              </a>
             </Reveal>
 
             <Reveal delay={200} className="mt-10">

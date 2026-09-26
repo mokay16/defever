@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InstagramIcon } from "./icons";
 import { site } from "@/lib/content";
 
 const links = [
@@ -38,12 +39,23 @@ export default function Footer() {
             ))}
           </ul>
 
-          <Link
-            href="/"
-            className="text-sm text-paper/70 transition-colors hover:text-red-light"
-          >
-            Home ↑
-          </Link>
+          <div className="flex items-center gap-5">
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Kathleen Defever on Instagram"
+              className="text-paper/70 transition-colors hover:text-red-light"
+            >
+              <InstagramIcon className="h-5 w-5" />
+            </a>
+            <Link
+              href="/"
+              className="text-sm text-paper/70 transition-colors hover:text-red-light"
+            >
+              Home ↑
+            </Link>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-xs leading-relaxed text-paper/45">
