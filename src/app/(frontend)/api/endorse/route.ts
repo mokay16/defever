@@ -74,7 +74,9 @@ export async function POST(request: Request) {
     );
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
-      await resend.emails.send({
+      // Resend reports failures (e.g. unverified sender domain) in the
+      // returned `error` rather than throwing, so check it explicitly.
+      const { error } = await resend.emails.send({
         from: `DefeverTownCouncil <${process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev"}>`,
         to: recipients,
         replyTo: email,
@@ -93,10 +95,19 @@ export async function POST(request: Request) {
           .filter((line) => line !== null)
           .join("\n"),
       });
+      if (error) throw new Error(`Resend: ${error.name} — ${error.message}`);
       emailSent = true;
     } catch (error) {
       console.error("Failed to send endorsement notification email", error);
     }
+  } else {
+    console.warn(
+      `Endorsement notification skipped: ${
+        recipients.length === 0
+          ? "no Notification Emails set in Contact Settings"
+          : "RESEND_API_KEY is not set"
+      }`,
+    );
   }
 
   if (emailSent) {
