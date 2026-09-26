@@ -140,6 +140,7 @@ export const endorsements: {
   { name: "Jeffrey Schaub", title: "Award-Winning Broadcast Journalist" },
   { name: "Susan Bolle", title: "Delegate, Marin Democratic Committee" },
   { name: "Jeff Chanin", title: "Attorney" },
+  { name: "Diane Green", title: "Art Docent, Belvedere-Tiburon Library" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
