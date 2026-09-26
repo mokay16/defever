@@ -30,12 +30,14 @@ export default function Endorsements({
               <Reveal key={org.name} delay={i * 80} className="h-full">
                 <div className="flex h-full flex-col items-center justify-center gap-5 rounded-md border-t-4 border-navy bg-white px-8 py-10 text-center shadow-sm">
                   {org.logo && (
-                    <div className="relative h-28 w-28">
+                    // Wide enough for wordmark logos (e.g. the Marin IJ's);
+                    // square logos still fill the full 112px height.
+                    <div className="relative h-28 w-full max-w-64">
                       <Image
                         src={org.logo}
                         alt={`${org.name} logo`}
                         fill
-                        sizes="112px"
+                        sizes="256px"
                         className="object-contain"
                       />
                     </div>

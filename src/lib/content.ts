@@ -155,6 +155,7 @@ export const endorsements: {
   {
     name: "Marin Independent Journal",
     title: "Newspaper",
+    logo: "/marin-ij-logo.svg",
     organization: true,
   },
 ];
