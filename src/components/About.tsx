@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -13,6 +14,19 @@ export default function About() {
           title="Over 8 years of service, on the record"
           headingLevel={1}
         />
+
+        <Reveal className="mt-14">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-md shadow-sm sm:aspect-[2/1]">
+            <Image
+              src="/kathleen-doorway.jpg"
+              alt="Kathleen Defever standing in a sunlit doorway"
+              fill
+              priority
+              sizes="(min-width: 1152px) 1088px, 100vw"
+              className="object-cover object-[50%_30%]"
+            />
+          </div>
+        </Reveal>
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-16">
           <div className="space-y-5">

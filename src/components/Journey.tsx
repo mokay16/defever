@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -15,30 +16,44 @@ export default function Journey() {
           headingLevel={1}
         />
 
-        <div className="relative mt-16 max-w-2xl">
-          {/* the connecting line running the length of the timeline */}
-          <div
-            aria-hidden
-            className="absolute left-1.5 top-2 bottom-2 w-px bg-ink/15"
-          />
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_22rem] lg:gap-16">
+          <Reveal className="lg:order-2 lg:sticky lg:top-28 lg:self-start">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-md shadow-sm lg:aspect-[4/5]">
+              <Image
+                src="/kathleen-barn-walk.jpg"
+                alt="Kathleen Defever walking past a weathered wooden barn"
+                fill
+                sizes="(min-width: 1024px) 352px, 100vw"
+                className="object-cover object-[36%_center]"
+              />
+            </div>
+          </Reveal>
 
-          <ol className="space-y-12">
-            {journey.map((entry, i) => (
-              <Reveal key={i} delay={i * 90} as="li" className="relative pl-10">
-                <span
-                  aria-hidden
-                  className="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-red ring-4 ring-paper"
-                />
-                <span className="font-display text-sm font-semibold uppercase tracking-wide text-red">
-                  {entry.year}
-                </span>
-                <h3 className="mt-1 font-display text-xl font-semibold uppercase tracking-wide text-ink">
-                  {entry.title}
-                </h3>
-                <p className="mt-2 leading-relaxed text-ink-soft">{entry.body}</p>
-              </Reveal>
-            ))}
-          </ol>
+          <div className="relative max-w-2xl">
+            {/* the connecting line running the length of the timeline */}
+            <div
+              aria-hidden
+              className="absolute left-1.5 top-2 bottom-2 w-px bg-ink/15"
+            />
+
+            <ol className="space-y-12">
+              {journey.map((entry, i) => (
+                <Reveal key={i} delay={i * 90} as="li" className="relative pl-10">
+                  <span
+                    aria-hidden
+                    className="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-red ring-4 ring-paper"
+                  />
+                  <span className="font-display text-sm font-semibold uppercase tracking-wide text-red">
+                    {entry.year}
+                  </span>
+                  <h3 className="mt-1 font-display text-xl font-semibold uppercase tracking-wide text-ink">
+                    {entry.title}
+                  </h3>
+                  <p className="mt-2 leading-relaxed text-ink-soft">{entry.body}</p>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>

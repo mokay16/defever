@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -21,6 +22,18 @@ export default function Contact() {
                   </span>
                 ))}
               </address>
+            </Reveal>
+
+            <Reveal delay={200} className="mt-10">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+                <Image
+                  src="/kathleen-barn-portrait.jpg"
+                  alt="Portrait of Kathleen Defever outdoors in the sun"
+                  fill
+                  sizes="(min-width: 1024px) 420px, 100vw"
+                  className="object-cover object-[45%_35%]"
+                />
+              </div>
             </Reveal>
           </div>
 

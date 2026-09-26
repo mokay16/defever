@@ -23,36 +23,79 @@ export const introParagraphs = [
   "When she is not serving her community, Kathleen is a successful, internationally-recognized consumer insurance attorney, most recently assisting dozens of fire victims every year in their pursuit of recovery from the devastating California wildfires.",
 ];
 
-export const priorities = [
+// Photos are all of Tiburon. Wikimedia Commons images are used under their
+// Creative Commons licenses, which require the credit shown with each photo —
+// keep `credit` when swapping an image, or drop it for campaign-owned photos.
+export type Priority = {
+  title: string;
+  description: string;
+  icon: "route" | "home" | "heart" | "flame" | "leaf";
+  image: { src: string; alt: string };
+  credit?: { text: string; href: string };
+};
+
+export const priorities: Priority[] = [
   {
     title: "Tiburon Boulevard Traffic",
     description:
       "Improving traffic flow and safety along Tiburon Boulevard and the town's busiest intersections.",
     icon: "route",
+    image: {
+      src: "/priorities/traffic.jpg",
+      alt: "Aerial view of Tiburon Boulevard and the downtown roundabout",
+    },
   },
   {
     title: "Housing",
     description:
       "Reducing the local impact of state housing mandates while protecting Tiburon's character.",
     icon: "home",
+    image: {
+      src: "/priorities/housing.jpg",
+      alt: "Homes on the Tiburon hillside above the harbor",
+    },
   },
   {
     title: "Improving Senior Services",
     description:
       "Improving services for seniors across Tiburon, so long-time residents can stay in the community they helped build.",
     icon: "heart",
+    image: {
+      src: "/priorities/senior-services.jpg",
+      alt: "Residents strolling along Main Street in downtown Tiburon",
+    },
+    credit: {
+      text: "Photo: MARELBU, CC BY 3.0",
+      href: "https://commons.wikimedia.org/wiki/File:Tiburon,_California_USA_-_Downtown_Tiburon_-_panoramio_(10).jpg",
+    },
   },
   {
     title: "Fire Prevention & Emergency Preparedness",
     description:
       "Building on a Firewise-certified track record to keep Tiburon neighborhoods ready and resilient.",
     icon: "flame",
+    image: {
+      src: "/priorities/fire-station.jpg",
+      alt: "The Tiburon Fire District station",
+    },
+    credit: {
+      text: "Photo: Johan Jönsson, CC BY-SA 4.0",
+      href: "https://commons.wikimedia.org/wiki/File:Tiburon_Fire_Station.jpg",
+    },
   },
   {
     title: "Open Space Preservation",
     description:
       "Protecting Tiburon's world-class open spaces, improving our parks, and supporting the arts.",
     icon: "leaf",
+    image: {
+      src: "/priorities/open-space.jpg",
+      alt: "A trail on Ring Mountain overlooking the Tiburon Peninsula and the Bay",
+    },
+    credit: {
+      text: "Photo: Frank Schulenburg, CC BY-SA 4.0",
+      href: "https://commons.wikimedia.org/wiki/File:View_of_the_Tiburon_Peninsula_and_the_Bay_from_Ring_Mountain.jpg",
+    },
   },
 ];
 

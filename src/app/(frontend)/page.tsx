@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Hero from "@/components/Hero";
+import PriorityPhoto from "@/components/PriorityPhoto";
 import Endorsements from "@/components/Endorsements";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -34,16 +36,23 @@ export default function Home() {
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {topPriorities.map((item, i) => (
               <Reveal key={item.title} delay={i * 90} className="h-full">
-                <div className="h-full rounded-md border border-ink/10 bg-white p-7">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-red/10 text-red">
-                    <PriorityIcon name={item.icon} className="h-5 w-5" />
+                <div className="flex h-full flex-col overflow-hidden rounded-md border border-ink/10 bg-white">
+                  <PriorityPhoto
+                    priority={item}
+                    sizes="(min-width: 640px) 360px, 100vw"
+                    className="aspect-[3/2]"
+                  />
+                  <div className="relative p-7 pt-9">
+                    <div className="absolute -top-6 left-7 flex h-11 w-11 items-center justify-center rounded-sm bg-red text-white shadow-sm">
+                      <PriorityIcon name={item.icon} className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold uppercase tracking-wide text-ink">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2.5 leading-relaxed text-ink-soft">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="mt-5 font-display text-xl font-semibold uppercase tracking-wide text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2.5 leading-relaxed text-ink-soft">
-                    {item.description}
-                  </p>
                 </div>
               </Reveal>
             ))}
@@ -102,7 +111,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-navy-deep py-20">
+      <section className="relative isolate overflow-hidden bg-navy-deep py-24 lg:py-32">
+        <Image
+          src="/kathleen-boots-forest.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover object-[50%_40%]"
+        />
+        <div className="absolute inset-0 -z-10 bg-navy-deep/75" aria-hidden />
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
           <Reveal>
             <h2 className="font-display text-3xl font-semibold uppercase tracking-wide text-white sm:text-4xl">
