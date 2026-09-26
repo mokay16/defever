@@ -186,6 +186,7 @@ export const endorsements: {
   { name: "Jeff Chanin", title: "Attorney" },
   { name: "Diane Green", title: "Art Docent, Belvedere-Tiburon Library" },
   { name: "Hawi Awash", title: "Co-Founder, YEMA" },
+  { name: "Cres Van Keulen", title: "HOA Board Member" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
