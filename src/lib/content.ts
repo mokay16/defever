@@ -192,8 +192,6 @@ export const endorsements: {
   { name: "Diane Green", title: "Art Docent, Belvedere-Tiburon Library" },
   { name: "Hawi Awash", title: "Co-Founder, YEMA" },
   { name: "Cres Van Keulen", title: "HOA Board Member" },
-  { name: "Marshall Gross" },
-  { name: "William Goldberg" },
   { name: "Caroline Kristensen", title: "Attorney" },
   {
     name: "Michael Wear",
