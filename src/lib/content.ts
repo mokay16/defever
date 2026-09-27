@@ -172,6 +172,11 @@ export const endorsements: {
   logo?: string;
   organization?: boolean;
 }[] = [
+  {
+    name: "Ben Allen",
+    title:
+      "State Senator, District 24; Candidate for California Insurance Commissioner",
+  },
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
@@ -189,6 +194,12 @@ export const endorsements: {
   { name: "Cres Van Keulen", title: "HOA Board Member" },
   { name: "Marshall Gross" },
   { name: "William Goldberg" },
+  { name: "Caroline Kristensen", title: "Attorney" },
+  {
+    name: "Michael Wear",
+    title:
+      "Attorney, Wear Trial Law; Former Marin County Deputy District Attorney",
+  },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
