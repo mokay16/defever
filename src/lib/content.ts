@@ -168,7 +168,7 @@ export const stats = [
 // shown in their own, larger row above the individual endorsers.
 export const endorsements: {
   name: string;
-  title: string;
+  title?: string;
   logo?: string;
   organization?: boolean;
 }[] = [
@@ -187,6 +187,8 @@ export const endorsements: {
   { name: "Diane Green", title: "Art Docent, Belvedere-Tiburon Library" },
   { name: "Hawi Awash", title: "Co-Founder, YEMA" },
   { name: "Cres Van Keulen", title: "HOA Board Member" },
+  { name: "Marshall Gross" },
+  { name: "William Goldberg" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",

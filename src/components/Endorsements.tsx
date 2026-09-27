@@ -92,7 +92,9 @@ export default function Endorsements({
                     <p className="font-display text-2xl font-semibold uppercase leading-tight tracking-wide text-ink">
                       {org.name}
                     </p>
-                    <p className="mt-2 text-ink-soft">{org.title}</p>
+                    {org.title && (
+                      <p className="mt-2 text-ink-soft">{org.title}</p>
+                    )}
                   </div>
                 </div>
               </Reveal>
@@ -123,7 +125,9 @@ export default function Endorsements({
                   <p className="font-display text-lg font-semibold text-ink">
                     {person.name}
                   </p>
-                  <p className="mt-1 text-sm text-ink-soft">{person.title}</p>
+                  {person.title && (
+                    <p className="mt-1 text-sm text-ink-soft">{person.title}</p>
+                  )}
                 </div>
               </div>
             </Reveal>
