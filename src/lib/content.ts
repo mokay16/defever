@@ -199,6 +199,11 @@ export const endorsements: {
       "Attorney, Wear Trial Law; Former Marin County Deputy District Attorney",
   },
   {
+    name: "Jim Allen",
+    title: "Belvedere-Tiburon Landmarks Society, Belvedere Land Co.",
+  },
+  { name: "Eric Crandall" },
+  {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
     logo: "/marin-firefighters-logo.png",
