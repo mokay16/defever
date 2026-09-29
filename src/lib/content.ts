@@ -203,6 +203,7 @@ export const endorsements: {
     title: "Belvedere-Tiburon Landmarks Society, Belvedere Land Co.",
   },
   { name: "Eric Crandall" },
+  { name: "Linda Emberson", title: "Former Tiburon Design Review Board Member" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
