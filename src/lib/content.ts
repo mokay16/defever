@@ -205,6 +205,9 @@ export const endorsements: {
   { name: "Eric Crandall" },
   { name: "Linda Emberson", title: "Former Tiburon Design Review Board Member" },
   { name: "Brenda Bottum", title: "Marine Mammal Center Board" },
+  { name: "George Landau", title: "Founder, Tiburon-Belvedere Rotary Club" },
+  { name: "William Goldberg" },
+  { name: "Marshall Gross" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
