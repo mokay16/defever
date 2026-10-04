@@ -177,6 +177,7 @@ export const endorsements: {
     title:
       "State Senator, District 24; Candidate for California Insurance Commissioner",
   },
+  { name: "Jon Welner", title: "Mayor of Tiburon" },
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
@@ -208,6 +209,9 @@ export const endorsements: {
   { name: "George Landau", title: "Founder, Tiburon-Belvedere Rotary Club" },
   { name: "William Goldberg" },
   { name: "Marshall Gross" },
+  { name: "Baanie Rashad", title: "Marine Mammal Rescue Specialist" },
+  { name: "Eric Pifer", title: "Physician and Entrepreneur" },
+  { name: "Stefanie Cho", title: "Rotary Club / Foundation Treasurer" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
