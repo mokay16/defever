@@ -1,18 +1,15 @@
 import Image from "next/image";
-import Script from "next/script";
 import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { site } from "@/lib/content";
 
-// Set once Kathleen's campaign creates an embeddable form in ActBlue
-// (Dashboard -> Create form -> Embed form -> Embed Generator tab). Both
-// values come from the generated embed code: the <script src="..."> and
-// the token in <div data-ab-form="...">. No payment data ever touches
-// this site or its database either way -- the form itself lives in
-// ActBlue's iframe and submits directly to them.
-const scriptUrl = process.env.NEXT_PUBLIC_ACTBLUE_SCRIPT_URL;
-const formToken = process.env.NEXT_PUBLIC_ACTBLUE_FORM_TOKEN;
+// The campaign's ActBlue contribution page, e.g.
+// https://secure.actblue.com/donate/<page-name>. ActBlue's in-page embeds
+// are only offered to federal campaigns and nonprofits, so a local race
+// links out to its hosted page instead. Donors pay on ActBlue -- no payment
+// data ever touches this site. Unset -> "launching soon" placeholder.
+const actBlueUrl = process.env.NEXT_PUBLIC_ACTBLUE_URL;
 
 export default function Donate() {
   return (
@@ -41,10 +38,22 @@ export default function Donate() {
 
           <Reveal delay={140}>
             <div className="mx-auto max-w-xl rounded-md bg-navy-deep p-8 text-center sm:p-10 lg:mx-0">
-              {scriptUrl && formToken ? (
+              {actBlueUrl ? (
                 <>
-                  <Script src={scriptUrl} strategy="lazyOnload" />
-                  <div data-ab-form={formToken} />
+                  <p className="font-display text-2xl font-semibold uppercase tracking-wide text-white">
+                    Support Kathleen&apos;s Campaign
+                  </p>
+                  <p className="mt-3 leading-relaxed text-paper/70">
+                    Contributions are processed securely by ActBlue.
+                  </p>
+                  <a
+                    href={actBlueUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-7 inline-block w-full rounded-sm bg-red px-8 py-4 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-light sm:w-auto"
+                  >
+                    Donate on ActBlue
+                  </a>
                 </>
               ) : (
                 <>
