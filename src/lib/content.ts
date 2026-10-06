@@ -212,6 +212,7 @@ export const endorsements: {
   { name: "Baanie Rashad", title: "Marine Mammal Rescue Specialist" },
   { name: "Eric Pifer", title: "Physician and Entrepreneur" },
   { name: "Stefanie Cho", title: "Rotary Club / Foundation Treasurer" },
+  { name: "Shana Rohde-Lynch", title: "Compass Real Estate Broker and Agent" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
@@ -228,6 +229,12 @@ export const endorsements: {
     name: "Marin Independent Journal",
     title: "Newspaper",
     logo: "/marin-ij-logo.svg",
+    organization: true,
+  },
+  {
+    name: "Teamsters Local 665",
+    title: "International Brotherhood of Teamsters",
+    logo: "/teamsters-665-logo.png",
     organization: true,
   },
 ];

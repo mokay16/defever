@@ -71,7 +71,13 @@ export default function Endorsements({
         </Reveal>
 
         {organizations.length > 0 && (
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          // Two per row for an even count, so a fourth card never sits
+          // alone on its own row.
+          <div
+            className={`mt-6 grid gap-6 md:grid-cols-2 ${
+              organizations.length % 2 === 0 ? "" : "lg:grid-cols-3"
+            }`}
+          >
             {organizations.map((org, i) => (
               <Reveal key={org.name} delay={i * 80} className="h-full">
                 <div className="flex h-full flex-col items-center justify-center gap-5 rounded-md border-t-4 border-navy bg-white px-8 py-10 text-center shadow-sm">
