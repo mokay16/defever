@@ -4,12 +4,24 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { site } from "@/lib/content";
 
-// The campaign's ActBlue contribution page, e.g.
-// https://secure.actblue.com/donate/<page-name>. ActBlue's in-page embeds
-// are only offered to federal campaigns and nonprofits, so a local race
-// links out to its hosted page instead. Donors pay on ActBlue -- no payment
-// data ever touches this site. Unset -> "launching soon" placeholder.
-const actBlueUrl = process.env.NEXT_PUBLIC_ACTBLUE_URL;
+// ActBlue can't be shown inside this page: its in-page embeds are only
+// offered to federal campaigns and nonprofits, and the hosted form sends
+// `frame-ancestors 'none'`, so an iframe is blocked too. Instead, each
+// amount opens the campaign's ActBlue form with that amount pre-selected
+// (`amount`), tagged `refcode=website` so ActBlue reports which donations
+// came from the site. Donors pay on ActBlue -- no payment data touches us.
+// Mirrors the first amounts on the ActBlue form itself, so each button
+// lands on a matching pre-selected option there.
+const AMOUNTS = [50, 100, 300, 500, 1000];
+
+function actBlueLink(amount?: number) {
+  const url = new URL(site.actBlueUrl);
+  url.searchParams.set("refcode", "website");
+  if (amount) url.searchParams.set("amount", String(amount));
+  return url.toString();
+}
+
+const linkProps = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 export default function Donate() {
   return (
@@ -24,7 +36,8 @@ export default function Donate() {
         />
 
         <div className="mt-14 grid items-start gap-10 lg:grid-cols-[20rem_1fr] lg:gap-16">
-          <Reveal delay={80}>
+          {/* On phones the amounts come first; the photo follows. */}
+          <Reveal delay={80} className="order-last lg:order-none">
             <div className="relative mx-auto aspect-[2/3] max-w-xs overflow-hidden rounded-md shadow-sm lg:max-w-none">
               <Image
                 src="/kathleen-boots-portrait.jpg"
@@ -37,36 +50,41 @@ export default function Donate() {
           </Reveal>
 
           <Reveal delay={140}>
-            <div className="mx-auto max-w-xl rounded-md bg-navy-deep p-8 text-center sm:p-10 lg:mx-0">
-              {actBlueUrl ? (
-                <>
-                  <p className="font-display text-2xl font-semibold uppercase tracking-wide text-white">
-                    Support Kathleen&apos;s Campaign
-                  </p>
-                  <p className="mt-3 leading-relaxed text-paper/70">
-                    Contributions are processed securely by ActBlue.
-                  </p>
+            <div className="mx-auto max-w-xl rounded-md bg-navy-deep p-8 sm:p-10 lg:mx-0">
+              <p className="font-display text-2xl font-semibold uppercase tracking-wide text-white">
+                Choose an amount
+              </p>
+              <p className="mt-2 leading-relaxed text-paper/70">
+                You&apos;ll finish your contribution securely on ActBlue.
+              </p>
+
+              <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {AMOUNTS.map((amount) => (
                   <a
-                    href={actBlueUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-7 inline-block w-full rounded-sm bg-red px-8 py-4 text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-light sm:w-auto"
+                    key={amount}
+                    href={actBlueLink(amount)}
+                    {...linkProps}
+                    className="rounded-sm border border-white/20 bg-white/5 px-4 py-4 text-center font-display text-2xl font-semibold text-white transition-colors hover:border-red hover:bg-red"
                   >
-                    Donate on ActBlue
+                    ${amount.toLocaleString("en-US")}
                   </a>
-                </>
-              ) : (
-                <>
-                  <p className="font-display text-xl font-semibold uppercase tracking-wide text-white">
-                    Online Donations Launching Soon
-                  </p>
-                  <p className="mt-3 leading-relaxed text-paper/70">
-                    Secure donation processing is being set up. Check back
-                    shortly, or use the contact form below to ask about other
-                    ways to contribute.
-                  </p>
-                </>
-              )}
+                ))}
+                <a
+                  href={actBlueLink()}
+                  {...linkProps}
+                  className="flex items-center justify-center rounded-sm border border-white/20 bg-white/5 px-4 py-4 text-center text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:border-red hover:bg-red"
+                >
+                  Other amount
+                </a>
+              </div>
+
+              <a
+                href={actBlueLink()}
+                {...linkProps}
+                className="mt-6 block w-full rounded-sm bg-red px-8 py-4 text-center text-base font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-light"
+              >
+                Donate on ActBlue
+              </a>
             </div>
 
             <p className="mx-auto mt-6 max-w-xl text-center text-xs leading-relaxed text-ink-soft/70 lg:mx-0">

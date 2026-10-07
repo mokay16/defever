@@ -7,6 +7,7 @@ export const site = {
     "Over 8 years of service to Tiburon. A record of showing up, listening, and getting things done.",
   address: ["1550 G Tiburon Boulevard", "#500", "Tiburon, CA 94920", "USA"],
   instagramUrl: "https://www.instagram.com/kathleen_defever",
+  actBlueUrl: "https://secure.actblue.com/donate/kathleen-defever-1",
 };
 
 export const credentials = [
