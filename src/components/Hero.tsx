@@ -75,11 +75,17 @@ export default function Hero() {
         <Reveal delay={340}>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
+              href="/donate"
+              className="inline-flex items-center gap-2 rounded-sm bg-red px-8 py-4 text-base font-bold uppercase tracking-wider text-white shadow-lg transition-colors hover:bg-red-light"
+            >
+              Donate
+              <ArrowIcon className="h-4 w-4" />
+            </Link>
+            <Link
               href="/priorities"
-              className="inline-flex items-center gap-2 rounded-sm bg-red px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-light"
+              className="inline-flex items-center gap-2 rounded-sm border border-white/25 px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:border-red-light hover:text-red-light"
             >
               See the Priorities
-              <ArrowIcon className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"

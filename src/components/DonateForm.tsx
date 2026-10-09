@@ -31,8 +31,9 @@ export default function DonateForm() {
 
   return (
     <div className="rounded-md border border-ink/10 bg-white p-6 shadow-sm sm:p-8">
-      <div className="flex items-start justify-between gap-4">
-        <h2 className="font-display text-2xl font-semibold uppercase leading-tight tracking-wide text-ink">
+      {/* The badge drops below the title on narrow phones. */}
+      <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3">
+        <h2 className="basis-full font-display text-2xl font-semibold uppercase leading-tight tracking-wide text-ink sm:basis-auto">
           Donate to Kathleen Defever!
         </h2>
         <span className="mt-1 inline-flex shrink-0 items-center gap-1.5 rounded-sm border border-ink/10 px-2 py-1 text-[11px] text-ink-soft">

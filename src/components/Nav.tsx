@@ -51,26 +51,26 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5 sm:gap-3">
           <Image
             src="/site-logo.png"
             alt="Kathleen Defever for Tiburon Town Council"
             width={44}
             height={44}
-            className="rounded-sm border border-white/15"
+            className="h-9 w-9 rounded-sm border border-white/15 sm:h-11 sm:w-11"
           />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-xl font-semibold tracking-tight text-white">
+            <span className="whitespace-nowrap font-display text-lg font-semibold tracking-tight text-white sm:text-xl">
               {site.candidateName}
             </span>
-            <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-red-light">
+            <span className="mt-1 hidden whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.18em] text-red-light sm:block">
               {site.office} &middot; {site.electionYear}
             </span>
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-9 xl:flex">
+        <ul className="hidden items-center gap-6 xl:flex 2xl:gap-9">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -85,21 +85,28 @@ export default function Nav() {
           ))}
         </ul>
 
-        <Link
-          href="/donate"
-          className="hidden rounded-sm bg-red px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-light xl:inline-block"
-        >
-          Donate
-        </Link>
+        {/* Donate stays visible at every screen size, never just in the menu. */}
+        <div className="flex shrink-0 items-center gap-3 sm:gap-4">
+          <Link
+            href="/donate"
+            className={`rounded-sm px-4 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-sm transition-colors xl:px-6 xl:py-3 ${
+              pathname === "/donate"
+                ? "bg-red-light"
+                : "bg-red hover:bg-red-light"
+            }`}
+          >
+            Donate
+          </Link>
 
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          className="text-white xl:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-        </button>
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="text-white xl:hidden"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       {open && (
@@ -118,12 +125,6 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <Link
-            href="/donate"
-            className="mt-3 block rounded-sm bg-red px-5 py-3 text-center text-sm font-semibold text-white"
-          >
-            Donate
-          </Link>
         </div>
       )}
     </header>
