@@ -178,8 +178,13 @@ export const endorsements: {
     title:
       "State Senator, District 24; Candidate for California Insurance Commissioner",
   },
+  {
+    name: "Damon Connolly",
+    title: "State Assemblymember and State Senate Candidate",
+  },
   { name: "Jon Welner", title: "Mayor of Tiburon" },
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
+  { name: "Holli Thier", title: "Tiburon Town Council and Past Mayor" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
   { name: "Jerry Riessen", title: "Tiburon Open Space" },
@@ -214,6 +219,7 @@ export const endorsements: {
   { name: "Eric Pifer", title: "Physician and Entrepreneur" },
   { name: "Stefanie Cho", title: "Rotary Club / Foundation Treasurer" },
   { name: "Shana Rohde-Lynch", title: "Compass Real Estate Broker and Agent" },
+  { name: "Ed Lynch", title: "Compass Real Estate, Tiburon-Belvedere" },
   {
     name: "Marin Professional Firefighters",
     title: "IAFF Local 1775",
