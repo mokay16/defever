@@ -186,6 +186,8 @@ export const endorsements: {
   { name: "Alice Fredericks", title: "Tiburon Town Council" },
   { name: "Holli Thier", title: "Tiburon Town Council and Past Mayor" },
   { name: "Erica Williams", title: "Tiburon Planning Commission" },
+  { name: "Daniel Amir", title: "Tiburon Planning Commissioner" },
+  { name: "Eric Woodward", title: "Tiburon Planning Commissioner" },
   { name: "Marilyn Nemzer", title: "Marin County Board of Education" },
   { name: "Jerry Riessen", title: "Tiburon Open Space" },
   { name: "Krupa Antani", title: "RUSD Governing Board of Trustees Candidate" },
