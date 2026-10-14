@@ -141,6 +141,34 @@ export const aboutKathleen = [
   "Kathleen loves to read about history, sociology, psychology, and economics. She also loves the opera, great wines, wellness and spirituality, and French and Italian food. She speaks intermediate French and some Spanish.",
 ];
 
+// Kathleen's own candidate statement, shown on the About page. Her exact
+// words: keep edits to typos only, and check with her before rewording.
+export const statement = {
+  intro:
+    "I have served as your Planning Commissioner for 8.5 years – making pivotal decisions about Tiburon such as:",
+  decisions: [
+    "Drafting the Town’s General Plan – a comprehensive plan covering the next 20 years and every element of Tiburon living - from parks to diversity, to infrastructure and zoning",
+    "Deciding Conditional Use Permits for businesses and tracking downtown vibrancy",
+    "Adapting Zoning ordinances and creating new ADU policies, including tracking ADU development",
+    "Addressing state housing mandates and advising the Council on housing density allocation",
+    "Reviewing the Town budget for inconsistencies with the General Plan",
+  ],
+  paragraphs: [
+    "The Commission is the investigatory and planning division of your government. We mostly work behind the scenes, creating long-term plans and advising the Council on a wide range of issues.",
+    "I’m an attorney who represents insurance consumers. I have litigated on behalf of those who have been unfairly denied their insurance benefits for 17 years, and recovered millions of dollars for my clients. I hold a Master of Insurance Law, have a PhD in progress, and speak at conferences around the world about international insurance law.",
+    "One of my greatest strengths is my ability to take on complex adversarial issues and succeed on behalf of the less powerful party. Achieving success against large corporations requires initiative, strategy, determination, and the skills to craft clever solutions. The people of Tiburon need a tenacious advocate and proven strategist to take on complicated, difficult issues like the impacts of the state housing mandates, the stubborn traffic problem, and the persistent lack of downtown vibrancy – not another bunch of vague promises and “visions” which always lead to zero progress.",
+    "I will also use my background in litigation to assess the increasing litigation costs incurred by the town in recent years, which are narrowing the budget surplus at a rapid rate.",
+    "None of these skills are held by any of the current town council members, or by any of the other candidates.",
+    "Many of my clients are wildfire victims. I am intimately familiar with the devastation of losing a home, a community, or worse, beloved pets and family members to wildfires. As temperatures get hotter for longer periods of time, the vegetation on the Peninsula becomes drier and more susceptible to fire. We don’t want to be another Pacific Palisades. If elected, I will do everything in my power to prevent this kind of tragedy from striking our beautiful town. We need proactive planning toward fire prevention and emergency preparedness. We need to coordinate with existing national and county programs and organizations. I was endorsed by the Marin Professional Firefighters, and already discussed preliminary plans with county leaders.",
+    "I also founded the only active Firewise community in Tiburon – which entitles members to significant insurance premium discounts. As an insurance expert, I understand the causes behind rising insurance costs, and what we can do about it. I am coordinating an informational event as a part of the Rotary-Library Speaker Series.",
+    "I dedicate my life to making the world a better place. I joined the Rotary 7 years ago; I am serving my 6th year of Presidency – and loving it. Rotarians are professionals and community leaders committed to integrity and service above self. We support and create programs that improve our community, and under my leadership we have repeatedly donated our time, funding, and expertise to organizations such as the Tiburon Police, Tiburon Fire, The Ranch, Tiburon Peninsula Chamber of Commerce, Reed Union Schools, Belvedere-Tiburon Library, the Hilarita, and numerous non-profit organizations located in Tiburon. When we are needed, we show up.",
+    "Other candidates speak of what they’d like to do, but cannot show concrete steps they have taken toward those goals. I’ve been working to improve Tiburon since I moved here 18 years ago, and have the track record to prove it.",
+    "I’ll be honored to receive your vote on November 3rd.",
+  ],
+  signOff: "Sincerely,",
+  signature: "Kathleen M. Defever, Esq., LLM",
+};
+
 export const achievements = [
   "Tiburon Planning Commission, 2018-Present",
   "DePaul University (B.A., J.D.)",

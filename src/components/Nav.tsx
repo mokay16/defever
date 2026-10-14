@@ -70,12 +70,12 @@ export default function Nav() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-6 xl:flex 2xl:gap-9">
+        <ul className="hidden items-center gap-6 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-sm uppercase tracking-[0.08em] transition-colors hover:text-red-light ${
+                className={`whitespace-nowrap text-sm uppercase tracking-[0.08em] transition-colors hover:text-red-light ${
                   pathname === link.href ? "text-red-light" : "text-paper/85"
                 }`}
               >
