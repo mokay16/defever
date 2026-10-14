@@ -83,12 +83,19 @@ export default function Home() {
                   {introParagraphs[0]}
                 </p>
               </Reveal>
-              <Reveal delay={140} className="mt-6">
+              <Reveal delay={140} className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-wide text-red transition-colors hover:text-red-light"
                 >
                   Meet Kathleen
+                  <ArrowIcon className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/statement"
+                  className="inline-flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-wide text-red transition-colors hover:text-red-light"
+                >
+                  Read Kathleen&apos;s Statement
                   <ArrowIcon className="h-4 w-4" />
                 </Link>
               </Reveal>

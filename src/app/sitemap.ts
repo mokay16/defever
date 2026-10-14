@@ -6,6 +6,7 @@ const routes = [
   { path: "/endorsements", priority: 0.8 },
   { path: "/priorities", priority: 0.8 },
   { path: "/about", priority: 0.8 },
+  { path: "/statement", priority: 0.7 },
   { path: "/journey", priority: 0.7 },
   { path: "/achievements", priority: 0.6 },
   { path: "/donate", priority: 0.9 },

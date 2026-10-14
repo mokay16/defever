@@ -1,3 +1,4 @@
+import Breadcrumbs from "./Breadcrumbs";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { statement } from "@/lib/content";
@@ -7,7 +8,12 @@ export default function Statement() {
   return (
     <section id="statement" className="bg-paper-alt py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <SectionHeading eyebrow="In Her Own Words" title="A Statement from Kathleen" />
+        <Breadcrumbs label="Statement" path="/statement" />
+        <SectionHeading
+          eyebrow="In Her Own Words"
+          title="A Statement from Kathleen"
+          headingLevel={1}
+        />
 
         <Reveal delay={80}>
           <article className="mt-12 max-w-3xl rounded-md border border-ink/10 bg-white p-7 shadow-sm sm:p-12">

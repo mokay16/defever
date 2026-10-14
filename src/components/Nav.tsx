@@ -11,6 +11,7 @@ const links = [
   { href: "/endorsements", label: "Endorsements" },
   { href: "/priorities", label: "Priorities" },
   { href: "/about", label: "About" },
+  { href: "/statement", label: "Statement" },
   { href: "/journey", label: "Journey" },
   { href: "/achievements", label: "Education & Qualifications" },
   { href: "/contact", label: "Contact" },
@@ -64,13 +65,13 @@ export default function Nav() {
             <span className="whitespace-nowrap font-display text-lg font-semibold tracking-tight text-white sm:text-xl">
               {site.candidateName}
             </span>
-            <span className="mt-1 hidden whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.18em] text-red-light sm:block">
+            <span className="mt-1 hidden whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.18em] text-red-light sm:block xl:hidden 2xl:block">
               {site.office} &middot; {site.electionYear}
             </span>
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-6 xl:flex">
+        <ul className="hidden items-center gap-5 xl:flex 2xl:gap-7">
           {links.map((link) => (
             <li key={link.href}>
               <Link

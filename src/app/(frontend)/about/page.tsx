@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import About from "@/components/About";
 import PersonalStory from "@/components/PersonalStory";
-import Statement from "@/components/Statement";
 import Gallery from "@/components/Gallery";
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function AboutPage() {
       <About />
       <PersonalStory />
       <Gallery />
-      <Statement />
     </>
   );
 }

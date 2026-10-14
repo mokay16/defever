@@ -6,6 +6,7 @@ const links = [
   { href: "/endorsements", label: "Endorsements" },
   { href: "/priorities", label: "Priorities" },
   { href: "/about", label: "About" },
+  { href: "/statement", label: "Statement" },
   { href: "/journey", label: "Journey" },
   { href: "/achievements", label: "Education & Qualifications" },
   { href: "/donate", label: "Donate" },
