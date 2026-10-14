@@ -7,13 +7,15 @@ import { usePathname } from "next/navigation";
 import { site } from "@/lib/content";
 import { CloseIcon, MenuIcon } from "./icons";
 
-const links = [
+// `short` is used in the desktop bar only, where space is tight; the phone
+// menu (and the footer) show the full label.
+const links: { href: string; label: string; short?: string }[] = [
   { href: "/endorsements", label: "Endorsements" },
   { href: "/priorities", label: "Priorities" },
   { href: "/about", label: "About" },
   { href: "/statement", label: "Statement" },
   { href: "/journey", label: "Journey" },
-  { href: "/achievements", label: "Education & Qualifications" },
+  { href: "/achievements", label: "Education & Qualifications", short: "Qualifications" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -52,7 +54,7 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8 xl:gap-10">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 sm:gap-3">
           <Image
             src="/site-logo.png"
@@ -65,13 +67,13 @@ export default function Nav() {
             <span className="whitespace-nowrap font-display text-lg font-semibold tracking-tight text-white sm:text-xl">
               {site.candidateName}
             </span>
-            <span className="mt-1 hidden whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.18em] text-red-light sm:block xl:hidden 2xl:block">
+            <span className="mt-1 hidden whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.18em] text-red-light sm:block xl:hidden">
               {site.office} &middot; {site.electionYear}
             </span>
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-5 xl:flex 2xl:gap-7">
+        <ul className="hidden items-center gap-8 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -80,7 +82,7 @@ export default function Nav() {
                   pathname === link.href ? "text-red-light" : "text-paper/85"
                 }`}
               >
-                {link.label}
+                {link.short ?? link.label}
               </Link>
             </li>
           ))}
