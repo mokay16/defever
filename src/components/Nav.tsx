@@ -54,7 +54,7 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8 xl:gap-10">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8 xl:gap-8">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 sm:gap-3">
           <Image
             src="/site-logo.png"
@@ -73,7 +73,7 @@ export default function Nav() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-8 xl:flex">
+        <ul className="hidden items-center gap-7 xl:ml-auto xl:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
